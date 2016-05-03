@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-
+#import "RYJTabBarController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,7 +17,23 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    self.window.bounds = [UIScreen mainScreen].bounds;
+    self.window.backgroundColor = [UIColor whiteColor];
+    [self.window makeKeyAndVisible];
+    self.window.rootViewController = [[RYJTabBarController alloc]init];
+    [self changNav];
     return YES;
+}
+
+- (void)changNav {
+    //设置NavigationBar背景颜色
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:54/255.0 green:53/255.0 blue:58/255.0 alpha:1]];
+    //@{}代表Dictionary
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor]}];
+    //不设置这个无法修改状态栏字体颜色
+    [[UINavigationBar appearance] setBarStyle:UIBarStyleBlack];
+    //返回按钮的颜色
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application {

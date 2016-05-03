@@ -15,6 +15,15 @@
 		21DC9FED1CD8C1F1008F16A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DC9FEB1CD8C1F1008F16A4 /* LaunchScreen.storyboard */; };
 		21DC9FF81CD8C1F1008F16A4 /* ChatJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC9FF71CD8C1F1008F16A4 /* ChatJieTests.m */; };
 		21DCA0031CD8C1F1008F16A4 /* ChatJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DCA0021CD8C1F1008F16A4 /* ChatJieUITests.m */; };
+		21DCA0271CD8C3C1008F16A4 /* NSString+PinYin.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DCA0261CD8C3C1008F16A4 /* NSString+PinYin.m */; };
+		21DCA02B1CD8C3E0008F16A4 /* RYJPersonModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DCA02A1CD8C3E0008F16A4 /* RYJPersonModel.m */; };
+		21DCA02E1CD8C3E6008F16A4 /* RYJPersonCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DCA02D1CD8C3E6008F16A4 /* RYJPersonCell.m */; };
+		21DCA0321CD8C3F8008F16A4 /* RYJFoundViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DCA0311CD8C3F8008F16A4 /* RYJFoundViewController.m */; };
+		21DCA0351CD8C416008F16A4 /* RYJCahtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DCA0341CD8C416008F16A4 /* RYJCahtViewController.m */; };
+		21DCA0381CD8C41F008F16A4 /* RYJAddressBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DCA0371CD8C41F008F16A4 /* RYJAddressBookViewController.m */; };
+		21DCA03D1CD8C42C008F16A4 /* RYJBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DCA03A1CD8C42C008F16A4 /* RYJBaseViewController.m */; };
+		21DCA03E1CD8C42C008F16A4 /* RYJTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DCA03C1CD8C42C008F16A4 /* RYJTabBarController.m */; };
+		21DCA0421CD8C770008F16A4 /* RYJMeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DCA0411CD8C770008F16A4 /* RYJMeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +60,25 @@
 		21DC9FFE1CD8C1F1008F16A4 /* ChatJieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatJieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21DCA0021CD8C1F1008F16A4 /* ChatJieUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatJieUITests.m; sourceTree = "<group>"; };
 		21DCA0041CD8C1F1008F16A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21DCA0251CD8C3C1008F16A4 /* NSString+PinYin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+PinYin.h"; sourceTree = "<group>"; };
+		21DCA0261CD8C3C1008F16A4 /* NSString+PinYin.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+PinYin.m"; sourceTree = "<group>"; };
+		21DCA0291CD8C3E0008F16A4 /* RYJPersonModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJPersonModel.h; sourceTree = "<group>"; };
+		21DCA02A1CD8C3E0008F16A4 /* RYJPersonModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJPersonModel.m; sourceTree = "<group>"; };
+		21DCA02C1CD8C3E6008F16A4 /* RYJPersonCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJPersonCell.h; sourceTree = "<group>"; };
+		21DCA02D1CD8C3E6008F16A4 /* RYJPersonCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJPersonCell.m; sourceTree = "<group>"; };
+		21DCA02F1CD8C3EB008F16A4 /* RYJMeViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RYJMeViewController.h; sourceTree = "<group>"; };
+		21DCA0301CD8C3F8008F16A4 /* RYJFoundViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJFoundViewController.h; sourceTree = "<group>"; };
+		21DCA0311CD8C3F8008F16A4 /* RYJFoundViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJFoundViewController.m; sourceTree = "<group>"; };
+		21DCA0331CD8C40F008F16A4 /* RYJCahtViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RYJCahtViewController.h; sourceTree = "<group>"; };
+		21DCA0341CD8C416008F16A4 /* RYJCahtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJCahtViewController.m; sourceTree = "<group>"; };
+		21DCA0361CD8C41F008F16A4 /* RYJAddressBookViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJAddressBookViewController.h; sourceTree = "<group>"; };
+		21DCA0371CD8C41F008F16A4 /* RYJAddressBookViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJAddressBookViewController.m; sourceTree = "<group>"; };
+		21DCA0391CD8C42C008F16A4 /* RYJBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJBaseViewController.h; sourceTree = "<group>"; };
+		21DCA03A1CD8C42C008F16A4 /* RYJBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJBaseViewController.m; sourceTree = "<group>"; };
+		21DCA03B1CD8C42C008F16A4 /* RYJTabBarController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJTabBarController.h; sourceTree = "<group>"; };
+		21DCA03C1CD8C42C008F16A4 /* RYJTabBarController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJTabBarController.m; sourceTree = "<group>"; };
+		21DCA0401CD8C516008F16A4 /* pchFile.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pchFile.pch; sourceTree = "<group>"; };
+		21DCA0411CD8C770008F16A4 /* RYJMeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJMeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,14 +129,16 @@
 		21DC9FDC1CD8C1F1008F16A4 /* ChatJie */ = {
 			isa = PBXGroup;
 			children = (
+				21DCA0151CD8C307008F16A4 /* Tool */,
+				21DCA0141CD8C2FD008F16A4 /* Main */,
+				21DCA0131CD8C2EB008F16A4 /* AddressBook */,
+				21DCA0121CD8C2E4008F16A4 /* Chat */,
+				21DCA0111CD8C2D5008F16A4 /* Found */,
+				21DCA0101CD8C2CE008F16A4 /* Me */,
 				21DC9FE01CD8C1F1008F16A4 /* AppDelegate.h */,
 				21DC9FE11CD8C1F1008F16A4 /* AppDelegate.m */,
 				21DC9FE31CD8C1F1008F16A4 /* ViewController.h */,
 				21DC9FE41CD8C1F1008F16A4 /* ViewController.m */,
-				21DC9FE61CD8C1F1008F16A4 /* Main.storyboard */,
-				21DC9FE91CD8C1F1008F16A4 /* Assets.xcassets */,
-				21DC9FEB1CD8C1F1008F16A4 /* LaunchScreen.storyboard */,
-				21DC9FEE1CD8C1F1008F16A4 /* Info.plist */,
 				21DC9FDD1CD8C1F1008F16A4 /* Supporting Files */,
 			);
 			path = ChatJie;
@@ -117,7 +147,12 @@
 		21DC9FDD1CD8C1F1008F16A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				21DC9FE61CD8C1F1008F16A4 /* Main.storyboard */,
+				21DC9FE91CD8C1F1008F16A4 /* Assets.xcassets */,
+				21DC9FEB1CD8C1F1008F16A4 /* LaunchScreen.storyboard */,
+				21DC9FEE1CD8C1F1008F16A4 /* Info.plist */,
 				21DC9FDE1CD8C1F1008F16A4 /* main.m */,
+				21DCA0401CD8C516008F16A4 /* pchFile.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -138,6 +173,170 @@
 				21DCA0041CD8C1F1008F16A4 /* Info.plist */,
 			);
 			path = ChatJieUITests;
+			sourceTree = "<group>";
+		};
+		21DCA0101CD8C2CE008F16A4 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				21DCA0181CD8C32E008F16A4 /* Controller */,
+				21DCA0171CD8C328008F16A4 /* View */,
+				21DCA0161CD8C31F008F16A4 /* Model */,
+			);
+			name = Me;
+			sourceTree = "<group>";
+		};
+		21DCA0111CD8C2D5008F16A4 /* Found */ = {
+			isa = PBXGroup;
+			children = (
+				21DCA01B1CD8C348008F16A4 /* Controller */,
+				21DCA01A1CD8C342008F16A4 /* View */,
+				21DCA0191CD8C33D008F16A4 /* Model */,
+			);
+			name = Found;
+			sourceTree = "<group>";
+		};
+		21DCA0121CD8C2E4008F16A4 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				21DCA01E1CD8C35F008F16A4 /* Controller */,
+				21DCA01D1CD8C359008F16A4 /* View */,
+				21DCA01C1CD8C353008F16A4 /* Model */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
+		21DCA0131CD8C2EB008F16A4 /* AddressBook */ = {
+			isa = PBXGroup;
+			children = (
+				21DCA0211CD8C37B008F16A4 /* Controller */,
+				21DCA0201CD8C36F008F16A4 /* View */,
+				21DCA01F1CD8C368008F16A4 /* Model */,
+			);
+			name = AddressBook;
+			sourceTree = "<group>";
+		};
+		21DCA0141CD8C2FD008F16A4 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				21DCA0391CD8C42C008F16A4 /* RYJBaseViewController.h */,
+				21DCA03A1CD8C42C008F16A4 /* RYJBaseViewController.m */,
+				21DCA03B1CD8C42C008F16A4 /* RYJTabBarController.h */,
+				21DCA03C1CD8C42C008F16A4 /* RYJTabBarController.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		21DCA0151CD8C307008F16A4 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				21DCA0281CD8C3C6008F16A4 /* NSString+PinYin */,
+			);
+			name = Tool;
+			sourceTree = "<group>";
+		};
+		21DCA0161CD8C31F008F16A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21DCA0291CD8C3E0008F16A4 /* RYJPersonModel.h */,
+				21DCA02A1CD8C3E0008F16A4 /* RYJPersonModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		21DCA0171CD8C328008F16A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21DCA02C1CD8C3E6008F16A4 /* RYJPersonCell.h */,
+				21DCA02D1CD8C3E6008F16A4 /* RYJPersonCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		21DCA0181CD8C32E008F16A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21DCA02F1CD8C3EB008F16A4 /* RYJMeViewController.h */,
+				21DCA0411CD8C770008F16A4 /* RYJMeViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		21DCA0191CD8C33D008F16A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		21DCA01A1CD8C342008F16A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		21DCA01B1CD8C348008F16A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21DCA0301CD8C3F8008F16A4 /* RYJFoundViewController.h */,
+				21DCA0311CD8C3F8008F16A4 /* RYJFoundViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		21DCA01C1CD8C353008F16A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		21DCA01D1CD8C359008F16A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		21DCA01E1CD8C35F008F16A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21DCA0331CD8C40F008F16A4 /* RYJCahtViewController.h */,
+				21DCA0341CD8C416008F16A4 /* RYJCahtViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		21DCA01F1CD8C368008F16A4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		21DCA0201CD8C36F008F16A4 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		21DCA0211CD8C37B008F16A4 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				21DCA0361CD8C41F008F16A4 /* RYJAddressBookViewController.h */,
+				21DCA0371CD8C41F008F16A4 /* RYJAddressBookViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		21DCA0281CD8C3C6008F16A4 /* NSString+PinYin */ = {
+			isa = PBXGroup;
+			children = (
+				21DCA0251CD8C3C1008F16A4 /* NSString+PinYin.h */,
+				21DCA0261CD8C3C1008F16A4 /* NSString+PinYin.m */,
+			);
+			name = "NSString+PinYin";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +401,7 @@
 		21DC9FD21CD8C1F1008F16A4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = "";
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = renyijie;
 				TargetAttributes = {
@@ -273,8 +473,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21DCA03E1CD8C42C008F16A4 /* RYJTabBarController.m in Sources */,
+				21DCA0321CD8C3F8008F16A4 /* RYJFoundViewController.m in Sources */,
+				21DCA0421CD8C770008F16A4 /* RYJMeViewController.m in Sources */,
+				21DCA0381CD8C41F008F16A4 /* RYJAddressBookViewController.m in Sources */,
+				21DCA02E1CD8C3E6008F16A4 /* RYJPersonCell.m in Sources */,
+				21DCA03D1CD8C42C008F16A4 /* RYJBaseViewController.m in Sources */,
 				21DC9FE51CD8C1F1008F16A4 /* ViewController.m in Sources */,
 				21DC9FE21CD8C1F1008F16A4 /* AppDelegate.m in Sources */,
+				21DCA02B1CD8C3E0008F16A4 /* RYJPersonModel.m in Sources */,
+				21DCA0271CD8C3C1008F16A4 /* NSString+PinYin.m in Sources */,
+				21DCA0351CD8C416008F16A4 /* RYJCahtViewController.m in Sources */,
 				21DC9FDF1CD8C1F1008F16A4 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -416,6 +625,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/wang/Desktop/ChatJie/ChatJie/ChatJie/pchFile.pch;
 				INFOPLIST_FILE = ChatJie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.hdu.ChatJie;
@@ -427,6 +637,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREFIX_HEADER = /Users/wang/Desktop/ChatJie/ChatJie/ChatJie/pchFile.pch;
 				INFOPLIST_FILE = ChatJie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.hdu.ChatJie;
