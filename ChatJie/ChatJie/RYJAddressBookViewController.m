@@ -11,7 +11,7 @@
 #import "RYJPersonModel.h"
 
 @interface RYJAddressBookViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property(nonatomic,strong)NSMutableArray * dataArr;
+@property(nonatomic,strong)NSArray * dataArr;
 
 @property(nonatomic,strong)UITableView * tableView;
 
@@ -32,62 +32,53 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    // 自动调整scrollview的 inset
+    self.automaticallyAdjustsScrollViewInsets = NO;
+    
     [self createTableView];
 }
 - (void)preData {
-    NSArray * nameArr = @[
-                          @{
-                              @"name":@"马化腾",
-                              @"imgName":@"avater.jpg"
-                              },
-                          @{
-                              @"name":@"张小龙",
-                              @"imgName":@"avater.jpg"
-                              },
-                          @{
-                              @"name":@"乔帮主",
-                              @"imgName":@"avater.jpg"
-                              },
-                          @{
-                              @"name":@"库里",
-                              @"imgName":@"avater.jpg"
-                              }
-                          ];
+    _dataArr = @[
+                 @{
+                     @"name":@"马化腾",
+                     @"imgName":@"me"
+                     },
+                 @{
+                     @"name":@"马云",
+                     @"imgName":@"me"
+                     },
+                 @{
+                     @"name":@"乔布斯",
+                     @"imgName":@"me"
+                     },
+                 @{
+                     @"name":@"库里",
+                     @"imgName":@"me"
+                     }
+                 ];
     
-    for(char i = 'A';i <= 'Z';i++)
-    {
-        NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
-        for (int j = 0; j < nameArr.count; j++)
-        {
-            NSDictionary * nameDic = nameArr[j];
-            NSString * name = nameDic[@"name"];
-            NSString * imgName = nameDic[@"imgName"];
-            NSString * sectionName = [NSString stringWithFormat:@"%c",i];
-            
-            //属于这个组的nameArr
-            NSMutableArray * currNameArr = [[NSMutableArray alloc]init];
-            if ([[name getFirstLetter] isEqualToString:sectionName])
-            {
-                NSDictionary * currDic = @{
-                                           @"name":name,
-                                           @"imgName":imgName
-                                           };
-                
-                [currNameArr addObject:currDic];
-            }
-            
-            if (currNameArr.count > 0)
-            {
-                [dic setObject:currNameArr forKey:@"nameArr"];
-                [dic setObject:sectionName forKey:@"sectionName"];
-                [_dataArr addObject:dic];
-            }
-        }
-    }
+    _sectionArr = @[
+                    @{
+                        @"name":@"新的朋友",
+                        @"imgName":@"book_newfriend"
+                        },
+                    @{
+                        @"name":@"群聊",
+                        @"imgName":@"book_group"
+                        },
+                    @{
+                        @"name":@"标签",
+                        @"imgName":@"book_tag"
+                        },
+                    @{
+                        @"name":@"公众号",
+                        @"imgName":@"book_gong"
+                        }
+                    ];
+    
 }
 
 - (void)createTableView{
-    
     _tableView = ({
         
         UITableView * tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64 - 44) style:UITableViewStyleGrouped];
@@ -102,12 +93,13 @@
         tableView;
     });
     [self.view addSubview:_tableView];
-
+    
 }
 
 #pragma mark - UITableViewDataSource
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return self.dataArr.count + 1;
+    //    return self.dataArr.count + 1;
+    return 2;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -117,11 +109,14 @@
     }
     else
     {
-        NSDictionary * dic = _dataArr[section - 1];
-        NSArray * arr = dic[@"nameArr"];
-        return arr.count;
+        /*
+         NSDictionary * dic = _dataArr[section];
+         NSArray * arr = dic[@"nameArr"];
+         return arr.count;
+         */
+        return _dataArr.count;
     }
-
+    
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -145,27 +140,9 @@
         cell.imageView.image = [UIImage imageNamed:dic[@"imgName"]];
         cell.textLabel.text = dic[@"name"];
     } else {
-        NSDictionary * dic = _dataArr[indexPath.section - 1];
-        
-        NSArray * arr = dic[@"nameArr"];
-        
-        //当前cell的信息
-        RYJPersonModel * model = arr[indexPath.row];
-        
-        
-        cell.textLabel.text = model.nickName;
-        
-        UIImage *icon = cell.imageView.image;
-        
-        //修改icon尺寸
-        CGSize itemSize = CGSizeMake(RYJGiveWidth(36), RYJGiveWidth(36));
-        UIGraphicsBeginImageContextWithOptions(itemSize, NO,0.0);
-        CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
-        [icon drawInRect:imageRect];
-        cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
-        
-        UIGraphicsEndImageContext();
-
+        NSDictionary *dic = self.dataArr[indexPath.row];
+        cell.imageView.image = [UIImage imageNamed:dic[@"imgName"]];
+        cell.textLabel.text = dic[@"name"];
     }
 }
 
@@ -193,7 +170,6 @@
     return RYJGiveHeight(0.01);
 }
 @end
-
 
 
 
