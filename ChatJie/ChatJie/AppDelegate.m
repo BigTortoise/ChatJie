@@ -19,7 +19,7 @@
     // Override point for customization after application launch.
     //设置窗口尺寸
     self.window.bounds = [UIScreen mainScreen].bounds;
-//    self.window.backgroundColor = [UIColor whiteColor];
+    self.window.backgroundColor = [UIColor whiteColor];
     // 显示窗口
     [self.window makeKeyAndVisible];
     // 设置窗口根控制器

@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2142867E1CD98FBE00256529 /* RYJFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142867D1CD98FBE00256529 /* RYJFriendModel.m */; };
+		214286821CD9CE6C00256529 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214286801CD9CE6C00256529 /* ChatCell.m */; };
+		214286831CD9CE6C00256529 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 214286811CD9CE6C00256529 /* ChatCell.xib */; };
+		214286861CD9D3A100256529 /* RYJChatModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 214286851CD9D3A100256529 /* RYJChatModel.m */; };
 		21DC9FDF1CD8C1F1008F16A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC9FDE1CD8C1F1008F16A4 /* main.m */; };
 		21DC9FE21CD8C1F1008F16A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC9FE11CD8C1F1008F16A4 /* AppDelegate.m */; };
 		21DC9FE51CD8C1F1008F16A4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC9FE41CD8C1F1008F16A4 /* ViewController.m */; };
@@ -44,6 +48,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2142867C1CD98FBE00256529 /* RYJFriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJFriendModel.h; sourceTree = "<group>"; };
+		2142867D1CD98FBE00256529 /* RYJFriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJFriendModel.m; sourceTree = "<group>"; };
+		2142867F1CD9CE6C00256529 /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
+		214286801CD9CE6C00256529 /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
+		214286811CD9CE6C00256529 /* ChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
+		214286841CD9D3A100256529 /* RYJChatModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJChatModel.h; sourceTree = "<group>"; };
+		214286851CD9D3A100256529 /* RYJChatModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJChatModel.m; sourceTree = "<group>"; };
 		21DC9FDA1CD8C1F1008F16A4 /* ChatJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21DC9FDE1CD8C1F1008F16A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21DC9FE01CD8C1F1008F16A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -287,6 +298,8 @@
 		21DCA01C1CD8C353008F16A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				214286841CD9D3A100256529 /* RYJChatModel.h */,
+				214286851CD9D3A100256529 /* RYJChatModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -294,6 +307,9 @@
 		21DCA01D1CD8C359008F16A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				2142867F1CD9CE6C00256529 /* ChatCell.h */,
+				214286801CD9CE6C00256529 /* ChatCell.m */,
+				214286811CD9CE6C00256529 /* ChatCell.xib */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -310,6 +326,8 @@
 		21DCA01F1CD8C368008F16A4 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				2142867C1CD98FBE00256529 /* RYJFriendModel.h */,
+				2142867D1CD98FBE00256529 /* RYJFriendModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -447,6 +465,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				21DC9FED1CD8C1F1008F16A4 /* LaunchScreen.storyboard in Resources */,
+				214286831CD9CE6C00256529 /* ChatCell.xib in Resources */,
 				21DC9FEA1CD8C1F1008F16A4 /* Assets.xcassets in Resources */,
 				21DC9FE81CD8C1F1008F16A4 /* Main.storyboard in Resources */,
 			);
@@ -474,10 +493,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				21DCA03E1CD8C42C008F16A4 /* RYJTabBarController.m in Sources */,
+				214286821CD9CE6C00256529 /* ChatCell.m in Sources */,
 				21DCA0321CD8C3F8008F16A4 /* RYJFoundViewController.m in Sources */,
 				21DCA0421CD8C770008F16A4 /* RYJMeViewController.m in Sources */,
 				21DCA0381CD8C41F008F16A4 /* RYJAddressBookViewController.m in Sources */,
 				21DCA02E1CD8C3E6008F16A4 /* RYJPersonCell.m in Sources */,
+				2142867E1CD98FBE00256529 /* RYJFriendModel.m in Sources */,
+				214286861CD9D3A100256529 /* RYJChatModel.m in Sources */,
 				21DCA03D1CD8C42C008F16A4 /* RYJBaseViewController.m in Sources */,
 				21DC9FE51CD8C1F1008F16A4 /* ViewController.m in Sources */,
 				21DC9FE21CD8C1F1008F16A4 /* AppDelegate.m in Sources */,
@@ -627,7 +649,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREFIX_HEADER = /Users/renyijie/Desktop/ChatJie/ChatJie/ChatJie/pchFile.pch;
+				GCC_PREFIX_HEADER = /Users/wang/Desktop/ChatJie/ChatJie/ChatJie/pchFile.pch;
 				INFOPLIST_FILE = ChatJie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.hdu.ChatJie;
@@ -641,7 +663,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				GCC_PREFIX_HEADER = /Users/renyijie/Desktop/ChatJie/ChatJie/ChatJie/pchFile.pch;
+				GCC_PREFIX_HEADER = /Users/wang/Desktop/ChatJie/ChatJie/ChatJie/pchFile.pch;
 				INFOPLIST_FILE = ChatJie/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = cn.edu.hdu.ChatJie;

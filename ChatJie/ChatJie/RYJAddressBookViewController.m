@@ -15,6 +15,8 @@
 
 @property(nonatomic,strong)UITableView * tableView;
 
+@property(nonatomic,strong)UISearchController * searchController;
+
 @property(nonatomic,copy)NSArray * sectionArr;
 
 @property(nonatomic,strong)NSMutableArray * searchArr;
@@ -22,20 +24,22 @@
 
 @implementation RYJAddressBookViewController
 
-- (void)viewWillAppear:(BOOL)animated {
-    
-    //准备数据
-    [self preData];
-}
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // 自动调整scrollview的 inset
     self.automaticallyAdjustsScrollViewInsets = NO;
     
-    [self createTableView];
+//    [self addRightBtnWithImgName:@"book_addfriend" andSelector:@selector(rightBtnClick:)];
+    //准备数据
+    [self preData];
 }
-- (void)preData {
+
+- (void)preData
+{
+    _dataArr = [[NSMutableArray alloc]init];
+    
+    _searchArr = [[NSMutableArray alloc]init];
+    
     _sectionArr = @[
                     @{
                         @"name":@"新的朋友",
@@ -55,52 +59,63 @@
                         }
                     ];
     
-    _dataArr = @[
-                 @{
-                     @"name":@"马化腾",
-                     @"imgName":@"me"
-                     },
-                 @{
-                     @"name":@"马云",
-                     @"imgName":@"me"
-                     },
-                 @{
-                     @"name":@"乔布斯",
-                     @"imgName":@"me"
-                     },
-                 @{
-                     @"name":@"库里",
-                     @"imgName":@"me"
-                     }
-                 ];
-    for (char i = 'A'; i <= 'Z'; i++)
+    NSArray * nameArr = @[
+                          @{
+                              @"name":@"马云",
+                              @"imgName":@"me"
+                              },
+                          @{
+                              @"name":@"任一杰",
+                              @"imgName":@"me"
+                              },
+                          @{
+                              @"name":@"库里",
+                              @"imgName":@"me"
+                              },
+                          @{
+                              @"name":@"乔布斯",
+                              @"imgName":@"me"
+                              }
+                          ];
+    
+    for(char i = 'A';i <= 'Z';i++)
     {
-        
-        NSString * str = [NSString stringWithFormat:@"%c",i];
-        
-        NSMutableArray * dateMuArr = [[NSMutableArray alloc]init];
-        
-        for (NSString * dateName in _dataArr)
+        NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
+        for (int j = 0; j < nameArr.count; j++)
         {
-            //如果人名的首字母等于组名
-            if ([[dateName getFirstLetter] isEqualToString:str])
+            NSDictionary * nameDic = nameArr[j];
+            NSString * name = nameDic[@"name"];
+            NSString * imgName = nameDic[@"imgName"];
+            NSString * sectionName = [NSString stringWithFormat:@"%c",i];
+            
+            //属于这个组的nameArr
+            NSMutableArray * currNameArr = [[NSMutableArray alloc]init];
+            if ([[name getFirstLetter] isEqualToString:sectionName])
             {
-                [dateMuArr addObject:_dataArr];
+                NSDictionary * currDic = @{
+                                           @"name":name,
+                                           @"imgName":imgName
+                                           };
+                
+                [currNameArr addObject:currDic];
+            }
+            
+            if (currNameArr.count > 0)
+            {
+                [dic setObject:currNameArr forKey:@"nameArr"];
+                [dic setObject:sectionName forKey:@"sectionName"];
+                [_dataArr addObject:dic];
             }
         }
         
-        NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
-        [dic setObject:str forKey:@"Title"];
-        [dic setObject:dateMuArr forKey:@"Arr"];
-        
-        [_dataArr addObject:dic];
     }
-    
     NSLog(@"%@",_dataArr);
     
+    [self createTableView];
 }
 
-- (void)createTableView{
+- (void)createTableView
+{
     _tableView = ({
         
         UITableView * tableView = [[UITableView alloc]initWithFrame:CGRectMake(0, 64, self.view.frame.size.width, self.view.frame.size.height - 64 - 44) style:UITableViewStyleGrouped];
@@ -115,33 +130,36 @@
         tableView;
     });
     [self.view addSubview:_tableView];
-    
 }
 
-#pragma mark - UITableViewDataSource
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    //    return self.dataArr.count + 1;
-    return 2;
+- (void)rightBtnClick:(UIButton *)sender
+{
+    NSLog(@"点击了");
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#pragma mark --tableView--
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
     if (section == 0)
     {
         return _sectionArr.count;
     }
     else
     {
-        /*
-         NSDictionary * dic = _dataArr[section];
-         NSArray * arr = dic[@"nameArr"];
-         return arr.count;
-         */
-        return _dataArr.count;
+        NSDictionary * dic = _dataArr[section - 1];
+        NSArray * arr = dic[@"nameArr"];
+        return arr.count;
     }
-    
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return _dataArr.count + 1;
+}
+
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
     static NSString * identifier = @"bookCell";
     
     UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:identifier];
@@ -154,17 +172,41 @@
     return cell;
 }
 
-
-//在willDisplayCell处理数据
-- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.section == 0) {
-        NSDictionary *dic = self.sectionArr[indexPath.row];
+//养成习惯在WillDisplayCell中处理数据
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (indexPath.section == 0)
+    {
+        NSDictionary * dic = _sectionArr[indexPath.row];
+        
         cell.imageView.image = [UIImage imageNamed:dic[@"imgName"]];
+        
         cell.textLabel.text = dic[@"name"];
-    } else {
-        NSDictionary *dic = self.dataArr[indexPath.row];
-        cell.imageView.image = [UIImage imageNamed:dic[@"imgName"]];
-        cell.textLabel.text = dic[@"name"];
+    }
+    else
+    {
+        
+        NSDictionary * dic = _dataArr[indexPath.section - 1];
+        
+        NSArray * arr = dic[@"nameArr"];
+        
+        //当前cell的信息
+        NSDictionary * rowDic = arr[indexPath.row];
+        
+        cell.imageView.image = [UIImage imageNamed:rowDic[@"imgName"]];
+        
+        cell.textLabel.text = rowDic[@"name"];
+        
+        UIImage *icon = [UIImage imageNamed:rowDic[@"imgName"]];
+        
+        //修改icon尺寸
+        CGSize itemSize = CGSizeMake(RYJGiveWidth(36), RYJGiveWidth(36));
+        UIGraphicsBeginImageContextWithOptions(itemSize, NO,0.0);
+        CGRect imageRect = CGRectMake(0.0, 0.0, itemSize.width, itemSize.height);
+        [icon drawInRect:imageRect];
+        cell.imageView.image = UIGraphicsGetImageFromCurrentImageContext();
+        
+        UIGraphicsEndImageContext();
     }
 }
 
@@ -190,6 +232,95 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForFooterInSection:(NSInteger)section
 {
     return RYJGiveHeight(0.01);
+}
+
+//头视图
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
+{
+    if (section != 0)
+    {
+        UILabel * label = [[UILabel alloc]initWithFrame:CGRectMake(0, 0, RYJGiveWidth(30), RYJGiveHeight(20))];
+        
+        NSDictionary * dic = _dataArr[section - 1];
+        
+        label.text = [NSString stringWithFormat:@"   %@",dic[@"sectionName"]];
+        
+        label.textAlignment = NSTextAlignmentLeft;
+        
+        label.font = [UIFont systemFontOfSize:10];
+        
+        label.textColor = [UIColor colorWithRed:141/255.0 green:141/255.0 blue:146/255.0 alpha:1];
+        
+        return label;
+    }
+    //搜索框
+    else
+    {
+        self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
+        
+        //self.searchController.searchResultsUpdater = self;
+        
+        self.searchController.dimsBackgroundDuringPresentation = YES;
+        
+        [self.searchController.searchBar sizeToFit];
+        
+        //self.searchController.searchBar.backgroundColor = [UIColor colorWithRed:239/255.0 green:239/255.0 blue:244/255.0 alpha:1];
+        
+        self.searchController.searchBar.backgroundImage = [[UIImage alloc]init];
+        
+        self.searchController.searchBar.placeholder = @"搜索";
+        
+        return self.searchController.searchBar;
+    }
+    return nil;
+}
+
+//加索引
+- (NSArray *)sectionIndexTitlesForTableView:(UITableView *)tableView{
+    
+    //索引背景颜色
+    tableView.sectionIndexBackgroundColor = [UIColor clearColor];
+    
+    //索引颜色
+    tableView.sectionIndexColor = [UIColor colorWithRed:82/255.0 green:82/255.0 blue:82/255.0 alpha:1];
+    
+    NSMutableArray * arr = [[NSMutableArray alloc]init];
+    
+    //加放大镜
+    [arr addObject:UITableViewIndexSearch];
+    
+    for (NSDictionary * dic in _dataArr)
+    {
+        [arr addObject:dic[@"sectionName"]];
+    }
+    return arr;
+}
+
+#pragma mark --选中Cell的方法--
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
+#pragma mark - searchController delegate
+
+-(void)updateSearchResultsForSearchController:(UISearchController *)searchController
+{
+    
+}
+
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    if (self.searchController.active) {
+        self.searchController.active = NO;
+        [self.searchController.searchBar removeFromSuperview];
+    }
+}
+
+- (void)didReceiveMemoryWarning {
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 @end
 
