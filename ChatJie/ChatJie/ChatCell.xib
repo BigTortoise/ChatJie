@@ -23,7 +23,7 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IzF-lf-5Cg">
-                        <rect key="frame" x="57" y="23" width="250" height="20"/>
+                        <rect key="frame" x="57" y="23" width="242" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="s7N-iC-vsT"/>
                         </constraints>
@@ -32,13 +32,13 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6o-Y9-1Pi">
-                        <rect key="frame" x="309" y="23" width="120" height="21"/>
+                        <rect key="frame" x="301" y="23" width="120" height="21"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="120" id="Wp1-Wz-NFb"/>
                             <constraint firstAttribute="height" constant="21" id="k2R-8h-t9X"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dzW-Ye-GB6">
@@ -47,13 +47,13 @@
                             <constraint firstAttribute="height" constant="20" id="VaA-Tm-par"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="0.29999999999999999" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                 </subviews>
                 <constraints>
                     <constraint firstItem="E6o-Y9-1Pi" firstAttribute="leading" secondItem="IzF-lf-5Cg" secondAttribute="trailing" constant="44" id="Bzi-A8-KIE"/>
-                    <constraint firstAttribute="trailing" secondItem="E6o-Y9-1Pi" secondAttribute="trailing" constant="2" id="HB0-vp-wIK"/>
+                    <constraint firstAttribute="trailing" secondItem="E6o-Y9-1Pi" secondAttribute="trailing" constant="10" id="HB0-vp-wIK"/>
                     <constraint firstItem="IzF-lf-5Cg" firstAttribute="leading" secondItem="0NX-tM-owZ" secondAttribute="trailing" constant="2" id="IEC-55-ALX"/>
                     <constraint firstItem="dzW-Ye-GB6" firstAttribute="bottom" secondItem="0NX-tM-owZ" secondAttribute="bottom" id="Ng1-Ec-n10"/>
                     <constraint firstAttribute="trailing" secondItem="dzW-Ye-GB6" secondAttribute="trailing" constant="8" id="P2W-90-JLx"/>
