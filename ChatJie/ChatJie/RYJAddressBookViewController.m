@@ -11,11 +11,9 @@
 #import "RYJPersonModel.h"
 
 @interface RYJAddressBookViewController ()<UITableViewDelegate,UITableViewDataSource>
-@property(nonatomic,strong)NSArray * dataArr;
+@property(nonatomic,strong)NSMutableArray * dataArr;
 
 @property(nonatomic,strong)UITableView * tableView;
-
-@property(nonatomic,strong)UISearchController * searchController;
 
 @property(nonatomic,copy)NSArray * sectionArr;
 
@@ -38,25 +36,6 @@
     [self createTableView];
 }
 - (void)preData {
-    _dataArr = @[
-                 @{
-                     @"name":@"马化腾",
-                     @"imgName":@"me"
-                     },
-                 @{
-                     @"name":@"马云",
-                     @"imgName":@"me"
-                     },
-                 @{
-                     @"name":@"乔布斯",
-                     @"imgName":@"me"
-                     },
-                 @{
-                     @"name":@"库里",
-                     @"imgName":@"me"
-                     }
-                 ];
-    
     _sectionArr = @[
                     @{
                         @"name":@"新的朋友",
@@ -75,6 +54,49 @@
                         @"imgName":@"book_gong"
                         }
                     ];
+    
+    _dataArr = @[
+                 @{
+                     @"name":@"马化腾",
+                     @"imgName":@"me"
+                     },
+                 @{
+                     @"name":@"马云",
+                     @"imgName":@"me"
+                     },
+                 @{
+                     @"name":@"乔布斯",
+                     @"imgName":@"me"
+                     },
+                 @{
+                     @"name":@"库里",
+                     @"imgName":@"me"
+                     }
+                 ];
+    for (char i = 'A'; i <= 'Z'; i++)
+    {
+        
+        NSString * str = [NSString stringWithFormat:@"%c",i];
+        
+        NSMutableArray * dateMuArr = [[NSMutableArray alloc]init];
+        
+        for (NSString * dateName in _dataArr)
+        {
+            //如果人名的首字母等于组名
+            if ([[dateName getFirstLetter] isEqualToString:str])
+            {
+                [dateMuArr addObject:_dataArr];
+            }
+        }
+        
+        NSMutableDictionary * dic = [[NSMutableDictionary alloc]init];
+        [dic setObject:str forKey:@"Title"];
+        [dic setObject:dateMuArr forKey:@"Arr"];
+        
+        [_dataArr addObject:dic];
+    }
+    
+    NSLog(@"%@",_dataArr);
     
 }
 
