@@ -7,7 +7,7 @@
 //
 
 #import "RYJFoundViewController.h"
-
+#import "QuanViewController.h"
 @interface RYJFoundViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @property(nonatomic,strong)UITableView *tableView;
@@ -109,6 +109,51 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
     return  RYJGiveHeight(10);
+}
+
+#pragma mark - cell选中 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        if (indexPath.row == 0 ) {
+            QuanViewController *quan = [[QuanViewController alloc]init];
+            quan.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:quan animated:YES];
+        }
+    }
+    else if(indexPath.section == 1)
+    {
+        //扫一扫
+        if (indexPath.row == 0)
+        {
+            
+        }
+        //摇一摇
+        else if(indexPath.row == 1)
+        {
+            
+        }
+    }
+    else if(indexPath.section == 2)
+    {
+        //附近的人
+        if (indexPath.row == 0)
+        {
+            
+        }
+    }
+    else if(indexPath.section == 3)
+    {
+        //购物
+        if (indexPath.row == 0)
+        {
+            
+        }
+        //游戏
+        else if(indexPath.row == 1)
+        {
+            
+        }
+    }
 }
 @end
 
