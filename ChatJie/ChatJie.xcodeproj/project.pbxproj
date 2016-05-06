@@ -15,6 +15,9 @@
 		214286911CDC2FF200256529 /* QuanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 214286901CDC2FF200256529 /* QuanModel.m */; };
 		214286951CDC302900256529 /* RYJQuanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214286931CDC302900256529 /* RYJQuanCell.m */; };
 		214286961CDC302900256529 /* RYJQuanCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 214286941CDC302900256529 /* RYJQuanCell.xib */; };
+		214286991CDC3D6E00256529 /* RYJPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214286981CDC3D6E00256529 /* RYJPersonViewController.m */; };
+		2142869C1CDC3D9B00256529 /* RYJChangDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142869B1CDC3D9B00256529 /* RYJChangDataViewController.m */; };
+		2142869F1CDC3DBC00256529 /* RYJSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142869E1CDC3DBC00256529 /* RYJSettingViewController.m */; };
 		21DC9FDF1CD8C1F1008F16A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC9FDE1CD8C1F1008F16A4 /* main.m */; };
 		21DC9FE21CD8C1F1008F16A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC9FE11CD8C1F1008F16A4 /* AppDelegate.m */; };
 		21DC9FE81CD8C1F1008F16A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DC9FE61CD8C1F1008F16A4 /* Main.storyboard */; };
@@ -65,6 +68,12 @@
 		214286921CDC302900256529 /* RYJQuanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJQuanCell.h; sourceTree = "<group>"; };
 		214286931CDC302900256529 /* RYJQuanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJQuanCell.m; sourceTree = "<group>"; };
 		214286941CDC302900256529 /* RYJQuanCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RYJQuanCell.xib; sourceTree = "<group>"; };
+		214286971CDC3D6E00256529 /* RYJPersonViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJPersonViewController.h; sourceTree = "<group>"; };
+		214286981CDC3D6E00256529 /* RYJPersonViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJPersonViewController.m; sourceTree = "<group>"; };
+		2142869A1CDC3D9B00256529 /* RYJChangDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJChangDataViewController.h; sourceTree = "<group>"; };
+		2142869B1CDC3D9B00256529 /* RYJChangDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJChangDataViewController.m; sourceTree = "<group>"; };
+		2142869D1CDC3DBC00256529 /* RYJSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJSettingViewController.h; sourceTree = "<group>"; };
+		2142869E1CDC3DBC00256529 /* RYJSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJSettingViewController.m; sourceTree = "<group>"; };
 		21DC9FDA1CD8C1F1008F16A4 /* ChatJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21DC9FDE1CD8C1F1008F16A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21DC9FE01CD8C1F1008F16A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -314,6 +323,12 @@
 			children = (
 				21DCA02F1CD8C3EB008F16A4 /* RYJMeViewController.h */,
 				21DCA0411CD8C770008F16A4 /* RYJMeViewController.m */,
+				214286971CDC3D6E00256529 /* RYJPersonViewController.h */,
+				214286981CDC3D6E00256529 /* RYJPersonViewController.m */,
+				2142869A1CDC3D9B00256529 /* RYJChangDataViewController.h */,
+				2142869B1CDC3D9B00256529 /* RYJChangDataViewController.m */,
+				2142869D1CDC3DBC00256529 /* RYJSettingViewController.h */,
+				2142869E1CDC3DBC00256529 /* RYJSettingViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -549,14 +564,17 @@
 				21DCA03E1CD8C42C008F16A4 /* RYJTabBarController.m in Sources */,
 				214286821CD9CE6C00256529 /* ChatCell.m in Sources */,
 				214286951CDC302900256529 /* RYJQuanCell.m in Sources */,
+				2142869C1CDC3D9B00256529 /* RYJChangDataViewController.m in Sources */,
 				21DCA0321CD8C3F8008F16A4 /* RYJFoundViewController.m in Sources */,
 				21DCA0421CD8C770008F16A4 /* RYJMeViewController.m in Sources */,
 				21DCA0381CD8C41F008F16A4 /* RYJAddressBookViewController.m in Sources */,
+				2142869F1CDC3DBC00256529 /* RYJSettingViewController.m in Sources */,
 				21DCA02E1CD8C3E6008F16A4 /* RYJPersonCell.m in Sources */,
 				2142867E1CD98FBE00256529 /* RYJFriendModel.m in Sources */,
 				214286861CD9D3A100256529 /* RYJChatModel.m in Sources */,
 				21DCA03D1CD8C42C008F16A4 /* RYJBaseViewController.m in Sources */,
 				21DC9FE21CD8C1F1008F16A4 /* AppDelegate.m in Sources */,
+				214286991CDC3D6E00256529 /* RYJPersonViewController.m in Sources */,
 				21DCA02B1CD8C3E0008F16A4 /* RYJPersonModel.m in Sources */,
 				21DCA0271CD8C3C1008F16A4 /* NSString+PinYin.m in Sources */,
 				214286911CDC2FF200256529 /* QuanModel.m in Sources */,

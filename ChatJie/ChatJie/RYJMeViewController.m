@@ -9,6 +9,9 @@
 #import "RYJMeViewController.h"
 #import "RYJPersonModel.h"
 #import "RYJPersonCell.h"
+#import "RYJPersonViewController.h"
+#import "RYJChangDataViewController.h"
+#import "RYJSettingViewController.h"
 
 @interface RYJMeViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -143,6 +146,44 @@
     return RYJGiveHeight(10);
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.section == 0) {
+        // 我
+        if (indexPath.row == 0) {
+            RYJPersonViewController *personVC = [[RYJPersonViewController alloc]init];
+            personVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:personVC animated:YES];
+        }
+    }
+    else if (indexPath.section == 1) {
+        // 相册
+        if (indexPath.row == 0) {
+            
+        }
+        // 收藏
+        else if (indexPath.row == 1) {
+            
+        }
+        // 钱包
+        else if (indexPath.row == 2) {
+            
+        }
+    }
+    else if (indexPath.section == 2) {
+        // 表情
+        if (indexPath.row == 0) {
+            
+        }
+    }
+    else if (indexPath.section == 3) {
+        // 设置
+        if (indexPath.row == 0) {
+            RYJSettingViewController *settingVC = [[RYJSettingViewController alloc]init];
+            settingVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:settingVC animated:YES];
+        }
+    }
+}
 @end
 
 
