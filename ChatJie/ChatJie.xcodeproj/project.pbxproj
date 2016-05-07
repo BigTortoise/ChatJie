@@ -18,6 +18,7 @@
 		214286991CDC3D6E00256529 /* RYJPersonViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 214286981CDC3D6E00256529 /* RYJPersonViewController.m */; };
 		2142869C1CDC3D9B00256529 /* RYJChangDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142869B1CDC3D9B00256529 /* RYJChangDataViewController.m */; };
 		2142869F1CDC3DBC00256529 /* RYJSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142869E1CDC3DBC00256529 /* RYJSettingViewController.m */; };
+		21A919CF1CDD8F81001B7A4B /* GlassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A919CE1CDD8F81001B7A4B /* GlassView.m */; };
 		21DC9FDF1CD8C1F1008F16A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC9FDE1CD8C1F1008F16A4 /* main.m */; };
 		21DC9FE21CD8C1F1008F16A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC9FE11CD8C1F1008F16A4 /* AppDelegate.m */; };
 		21DC9FE81CD8C1F1008F16A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DC9FE61CD8C1F1008F16A4 /* Main.storyboard */; };
@@ -74,6 +75,8 @@
 		2142869B1CDC3D9B00256529 /* RYJChangDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJChangDataViewController.m; sourceTree = "<group>"; };
 		2142869D1CDC3DBC00256529 /* RYJSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJSettingViewController.h; sourceTree = "<group>"; };
 		2142869E1CDC3DBC00256529 /* RYJSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJSettingViewController.m; sourceTree = "<group>"; };
+		21A919CD1CDD8F81001B7A4B /* GlassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlassView.h; sourceTree = "<group>"; };
+		21A919CE1CDD8F81001B7A4B /* GlassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlassView.m; sourceTree = "<group>"; };
 		21DC9FDA1CD8C1F1008F16A4 /* ChatJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21DC9FDE1CD8C1F1008F16A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21DC9FE01CD8C1F1008F16A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -173,6 +176,13 @@
 				21DC9FE11CD8C1F1008F16A4 /* AppDelegate.m */,
 			);
 			name = Other;
+			sourceTree = "<group>";
+		};
+		21A919CC1CDD8A64001B7A4B /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
 			sourceTree = "<group>";
 		};
 		21DC9FD11CD8C1F1008F16A4 = {
@@ -295,6 +305,8 @@
 		21DCA0151CD8C307008F16A4 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				21A919CD1CDD8F81001B7A4B /* GlassView.h */,
+				21A919CE1CDD8F81001B7A4B /* GlassView.m */,
 				21DCA0281CD8C3C6008F16A4 /* NSString+PinYin */,
 			);
 			name = Tool;
@@ -321,6 +333,7 @@
 		21DCA0181CD8C32E008F16A4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				21A919CC1CDD8A64001B7A4B /* New Group */,
 				21DCA02F1CD8C3EB008F16A4 /* RYJMeViewController.h */,
 				21DCA0411CD8C770008F16A4 /* RYJMeViewController.m */,
 				214286971CDC3D6E00256529 /* RYJPersonViewController.h */,
@@ -563,6 +576,7 @@
 			files = (
 				21DCA03E1CD8C42C008F16A4 /* RYJTabBarController.m in Sources */,
 				214286821CD9CE6C00256529 /* ChatCell.m in Sources */,
+				21A919CF1CDD8F81001B7A4B /* GlassView.m in Sources */,
 				214286951CDC302900256529 /* RYJQuanCell.m in Sources */,
 				2142869C1CDC3D9B00256529 /* RYJChangDataViewController.m in Sources */,
 				21DCA0321CD8C3F8008F16A4 /* RYJFoundViewController.m in Sources */,

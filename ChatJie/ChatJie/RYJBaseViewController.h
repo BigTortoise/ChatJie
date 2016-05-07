@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "GlassView.h"
 @interface RYJBaseViewController : UIViewController
-
+/**
+ *  毛玻璃效果view
+ */
+@property (nonatomic,strong)GlassView * glassView;
 @end

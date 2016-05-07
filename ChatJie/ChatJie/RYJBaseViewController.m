@@ -33,5 +33,13 @@
     // Pass the selected object to the new view controller.
 }
 */
+- (GlassView *)glassView
+{
+    if (!_glassView)
+    {
+        _glassView = [[GlassView alloc]initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 64)];
+    }
+    return _glassView;
+}
 
 @end
