@@ -7,7 +7,7 @@
 //
 
 #import "RYJSettingViewController.h"
-
+#import "PreViewController.h"
 @interface RYJSettingViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong)UITableView * tableView;
 @property(nonatomic,copy)NSArray * dataArr;
@@ -128,7 +128,11 @@
     if (indexPath.section == 3) {
         if (indexPath.row == 0) {
             // 退出登录
-            NSLog(@"退出登录");
+            
+            UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+            PreViewController * preVC = [storyBoard instantiateViewControllerWithIdentifier:@"PreViewController"];
+            [UIApplication sharedApplication].keyWindow.rootViewController = preVC;
+            
         }
     }
 }

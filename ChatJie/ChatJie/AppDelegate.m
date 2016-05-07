@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "RYJTabBarController.h"
+#import "PreViewController.h"
 @interface AppDelegate ()
 
 @end
@@ -17,15 +18,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    //设置窗口尺寸
-    self.window.bounds = [UIScreen mainScreen].bounds;
+    
+    self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
+    
     self.window.backgroundColor = [UIColor whiteColor];
-    // 显示窗口
-    [self.window makeKeyAndVisible];
-    // 设置窗口根控制器
-    self.window.rootViewController = [[RYJTabBarController alloc]init];
-    // 
+    
+    
+    
     [self changNav];
+    
+    UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+    PreViewController * preVC = [storyBoard instantiateViewControllerWithIdentifier:@"PreViewController"];
+    
+    self.window.rootViewController = preVC;
+    
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

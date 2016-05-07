@@ -19,11 +19,13 @@
 		2142869C1CDC3D9B00256529 /* RYJChangDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142869B1CDC3D9B00256529 /* RYJChangDataViewController.m */; };
 		2142869F1CDC3DBC00256529 /* RYJSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142869E1CDC3DBC00256529 /* RYJSettingViewController.m */; };
 		21A919CF1CDD8F81001B7A4B /* GlassView.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A919CE1CDD8F81001B7A4B /* GlassView.m */; };
+		21A919D31CDD945F001B7A4B /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A919D21CDD945F001B7A4B /* Login.storyboard */; };
+		21A919D61CDDBB20001B7A4B /* PreViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A919D51CDDBB20001B7A4B /* PreViewController.m */; };
+		21A919D91CDDBB2C001B7A4B /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A919D81CDDBB2C001B7A4B /* LoginViewController.m */; };
+		21A919DC1CDDBB3C001B7A4B /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A919DB1CDDBB3C001B7A4B /* RegisterViewController.m */; };
 		21DC9FDF1CD8C1F1008F16A4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC9FDE1CD8C1F1008F16A4 /* main.m */; };
 		21DC9FE21CD8C1F1008F16A4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC9FE11CD8C1F1008F16A4 /* AppDelegate.m */; };
-		21DC9FE81CD8C1F1008F16A4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DC9FE61CD8C1F1008F16A4 /* Main.storyboard */; };
 		21DC9FEA1CD8C1F1008F16A4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21DC9FE91CD8C1F1008F16A4 /* Assets.xcassets */; };
-		21DC9FED1CD8C1F1008F16A4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21DC9FEB1CD8C1F1008F16A4 /* LaunchScreen.storyboard */; };
 		21DC9FF81CD8C1F1008F16A4 /* ChatJieTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DC9FF71CD8C1F1008F16A4 /* ChatJieTests.m */; };
 		21DCA0031CD8C1F1008F16A4 /* ChatJieUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DCA0021CD8C1F1008F16A4 /* ChatJieUITests.m */; };
 		21DCA0271CD8C3C1008F16A4 /* NSString+PinYin.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DCA0261CD8C3C1008F16A4 /* NSString+PinYin.m */; };
@@ -77,13 +79,18 @@
 		2142869E1CDC3DBC00256529 /* RYJSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJSettingViewController.m; sourceTree = "<group>"; };
 		21A919CD1CDD8F81001B7A4B /* GlassView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlassView.h; sourceTree = "<group>"; };
 		21A919CE1CDD8F81001B7A4B /* GlassView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlassView.m; sourceTree = "<group>"; };
+		21A919D21CDD945F001B7A4B /* Login.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		21A919D41CDDBB20001B7A4B /* PreViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PreViewController.h; sourceTree = "<group>"; };
+		21A919D51CDDBB20001B7A4B /* PreViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PreViewController.m; sourceTree = "<group>"; };
+		21A919D71CDDBB2C001B7A4B /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		21A919D81CDDBB2C001B7A4B /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		21A919DA1CDDBB3C001B7A4B /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
+		21A919DB1CDDBB3C001B7A4B /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		21DC9FDA1CD8C1F1008F16A4 /* ChatJie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ChatJie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21DC9FDE1CD8C1F1008F16A4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21DC9FE01CD8C1F1008F16A4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		21DC9FE11CD8C1F1008F16A4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		21DC9FE71CD8C1F1008F16A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21DC9FE91CD8C1F1008F16A4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		21DC9FEC1CD8C1F1008F16A4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		21DC9FEE1CD8C1F1008F16A4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		21DC9FF31CD8C1F1008F16A4 /* ChatJieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatJieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		21DC9FF71CD8C1F1008F16A4 /* ChatJieTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatJieTests.m; sourceTree = "<group>"; };
@@ -164,6 +171,13 @@
 		2142868A1CD9DC9700256529 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				21A919D21CDD945F001B7A4B /* Login.storyboard */,
+				21A919D41CDDBB20001B7A4B /* PreViewController.h */,
+				21A919D51CDDBB20001B7A4B /* PreViewController.m */,
+				21A919D71CDDBB2C001B7A4B /* LoginViewController.h */,
+				21A919D81CDDBB2C001B7A4B /* LoginViewController.m */,
+				21A919DA1CDDBB3C001B7A4B /* RegisterViewController.h */,
+				21A919DB1CDDBB3C001B7A4B /* RegisterViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -176,13 +190,6 @@
 				21DC9FE11CD8C1F1008F16A4 /* AppDelegate.m */,
 			);
 			name = Other;
-			sourceTree = "<group>";
-		};
-		21A919CC1CDD8A64001B7A4B /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "New Group";
 			sourceTree = "<group>";
 		};
 		21DC9FD11CD8C1F1008F16A4 = {
@@ -224,9 +231,7 @@
 		21DC9FDD1CD8C1F1008F16A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				21DC9FE61CD8C1F1008F16A4 /* Main.storyboard */,
 				21DC9FE91CD8C1F1008F16A4 /* Assets.xcassets */,
-				21DC9FEB1CD8C1F1008F16A4 /* LaunchScreen.storyboard */,
 				21DC9FEE1CD8C1F1008F16A4 /* Info.plist */,
 				21DC9FDE1CD8C1F1008F16A4 /* main.m */,
 			);
@@ -333,7 +338,6 @@
 		21DCA0181CD8C32E008F16A4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				21A919CC1CDD8A64001B7A4B /* New Group */,
 				21DCA02F1CD8C3EB008F16A4 /* RYJMeViewController.h */,
 				21DCA0411CD8C770008F16A4 /* RYJMeViewController.m */,
 				214286971CDC3D6E00256529 /* RYJPersonViewController.h */,
@@ -546,10 +550,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				214286961CDC302900256529 /* RYJQuanCell.xib in Resources */,
-				21DC9FED1CD8C1F1008F16A4 /* LaunchScreen.storyboard in Resources */,
+				21A919D31CDD945F001B7A4B /* Login.storyboard in Resources */,
 				214286831CD9CE6C00256529 /* ChatCell.xib in Resources */,
 				21DC9FEA1CD8C1F1008F16A4 /* Assets.xcassets in Resources */,
-				21DC9FE81CD8C1F1008F16A4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,13 +578,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				21DCA03E1CD8C42C008F16A4 /* RYJTabBarController.m in Sources */,
+				21A919D91CDDBB2C001B7A4B /* LoginViewController.m in Sources */,
 				214286821CD9CE6C00256529 /* ChatCell.m in Sources */,
 				21A919CF1CDD8F81001B7A4B /* GlassView.m in Sources */,
 				214286951CDC302900256529 /* RYJQuanCell.m in Sources */,
 				2142869C1CDC3D9B00256529 /* RYJChangDataViewController.m in Sources */,
 				21DCA0321CD8C3F8008F16A4 /* RYJFoundViewController.m in Sources */,
+				21A919DC1CDDBB3C001B7A4B /* RegisterViewController.m in Sources */,
 				21DCA0421CD8C770008F16A4 /* RYJMeViewController.m in Sources */,
 				21DCA0381CD8C41F008F16A4 /* RYJAddressBookViewController.m in Sources */,
+				21A919D61CDDBB20001B7A4B /* PreViewController.m in Sources */,
 				2142869F1CDC3DBC00256529 /* RYJSettingViewController.m in Sources */,
 				21DCA02E1CD8C3E6008F16A4 /* RYJPersonCell.m in Sources */,
 				2142867E1CD98FBE00256529 /* RYJFriendModel.m in Sources */,
@@ -628,25 +634,6 @@
 			targetProxy = 21DC9FFF1CD8C1F1008F16A4 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		21DC9FE61CD8C1F1008F16A4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21DC9FE71CD8C1F1008F16A4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		21DC9FEB1CD8C1F1008F16A4 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				21DC9FEC1CD8C1F1008F16A4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		21DCA0051CD8C1F1008F16A4 /* Debug */ = {
@@ -735,7 +722,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = /Users/wang/Desktop/ChatJie/ChatJie/ChatJie/pchFile.pch;
 				INFOPLIST_FILE = ChatJie/Info.plist;
@@ -749,7 +735,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = "Brand Assets";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREFIX_HEADER = /Users/wang/Desktop/ChatJie/ChatJie/ChatJie/pchFile.pch;
 				INFOPLIST_FILE = ChatJie/Info.plist;
