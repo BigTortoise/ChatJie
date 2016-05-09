@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "RYJTabBarController.h"
 #import "PreViewController.h"
+#import "EMSDK.h"
+
 @interface AppDelegate ()
 
 @end
@@ -19,13 +21,21 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
+    // 初始化环信SDK
+    EMOptions *options = [EMOptions optionsWithAppkey:@"10271910#chatjie"];
+    [[EMClient sharedClient]initializeSDKWithOptions:options];
+    
+    //初始化windows
+    [self initWindow];
+    
+    [self changNav];
+    return YES;
+}
+- (void)initWindow{
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
     self.window.backgroundColor = [UIColor whiteColor];
     
-    
-    
-    [self changNav];
     
     UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
     PreViewController * preVC = [storyBoard instantiateViewControllerWithIdentifier:@"PreViewController"];
@@ -34,9 +44,7 @@
     
     
     [self.window makeKeyAndVisible];
-    return YES;
 }
-
 - (void)changNav {
     //设置NavigationBar背景颜色
     [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:54/255.0 green:53/255.0 blue:58/255.0 alpha:1]];
@@ -56,10 +64,12 @@
 - (void)applicationDidEnterBackground:(UIApplication *)application {
     // Use this method to release shared resources, save user data, invalidate timers, and store enough application state information to restore your application to its current state in case it is terminated later.
     // If your application supports background execution, this method is called instead of applicationWillTerminate: when the user quits.
+    [[EMClient sharedClient] applicationDidEnterBackground:application];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
     // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
+    [[EMClient sharedClient] applicationWillEnterForeground:application];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {

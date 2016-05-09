@@ -7,8 +7,11 @@
 //
 
 #import "RegisterViewController.h"
-
+#import "LoginViewController.h"
+#import "EMSDK.h"
 @interface RegisterViewController ()
+@property (weak, nonatomic) IBOutlet UITextField *phoneNumber;
+@property (weak, nonatomic) IBOutlet UIButton *registerBtn;
 
 @end
 
@@ -16,18 +19,35 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    //监听填入手机号码
+    [_phoneNumber addTarget:self action:@selector(textChang) forControlEvents:UIControlEventEditingChanged];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+- (void)textChang {
+    // 当填入手机号长度 = 11位才可以注册
+    if( self.phoneNumber.text.length == 11 ){
+        self.registerBtn.enabled = YES;
+    }
 }
+// 取消按钮
 - (IBAction)dismissBtnClick:(id)sender {
     [self dismissViewControllerAnimated:YES completion:^{
         
     }];
 }
+// 注册
+- (IBAction)registerBtn:(id)sender {
+    
+    EMError *error = [[EMClient sharedClient] registerWithUsername:self.phoneNumber.text password:@"111"];
+    if (error == nil) {
+        NSLog(@"注册成功");
+
+    } else {
+        NSLog(@"注册失败");
+    }
+}
+
 
 /*
 #pragma mark - Navigation

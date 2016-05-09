@@ -8,6 +8,7 @@
 
 #import "RYJSettingViewController.h"
 #import "PreViewController.h"
+#import "EMSDK.h"
 @interface RYJSettingViewController ()<UITableViewDataSource,UITableViewDelegate>
 @property(nonatomic,strong)UITableView * tableView;
 @property(nonatomic,copy)NSArray * dataArr;
@@ -128,10 +129,17 @@
     if (indexPath.section == 3) {
         if (indexPath.row == 0) {
             // 退出登录
-            
-            UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
-            PreViewController * preVC = [storyBoard instantiateViewControllerWithIdentifier:@"PreViewController"];
-            [UIApplication sharedApplication].keyWindow.rootViewController = preVC;
+            EMError *error = [[EMClient sharedClient] logout:YES];
+            if (!error) {
+                NSLog(@"退出成功");
+                
+                UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
+                PreViewController * preVC = [storyBoard instantiateViewControllerWithIdentifier:@"PreViewController"];
+                [UIApplication sharedApplication].keyWindow.rootViewController = preVC;
+
+            } else {
+                NSLog(@"退出失败");
+            }
             
         }
     }
