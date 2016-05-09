@@ -136,6 +136,10 @@
                 UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
                 PreViewController * preVC = [storyBoard instantiateViewControllerWithIdentifier:@"PreViewController"];
                 [UIApplication sharedApplication].keyWindow.rootViewController = preVC;
+                
+                // 设置为非自动登陆
+                [[EMClient sharedClient].options setIsAutoLogin:NO];
+
 
             } else {
                 NSLog(@"退出失败");

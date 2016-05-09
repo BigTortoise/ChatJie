@@ -69,25 +69,32 @@
     // 提示用户，正在登录ing...
     [MBProgressHUD showMessage:@"正在登录ing..."];
     
-    EMError *error = [[EMClient sharedClient] loginWithUsername:self.phoneNumbertext.text password:self.passWordtext.text];
-    if (!error) {
-        NSLog(@"登陆成功");
-        
-        // 隐藏
-        [MBProgressHUD hideHUD];
-        
-        [self presentViewController:[[RYJTabBarController alloc]init] animated:YES completion:^{
-            
-        }];
-        
-        
-    } else {
-        NSLog(@"登陆失败");
-        // 隐藏
-        [MBProgressHUD hideHUD];
-        [MBProgressHUD showError:@"登陆失败"];
-    }
+    // 判断是否自动登陆
+    BOOL isAutoLogin = [EMClient sharedClient].options.isAutoLogin;
     
+    if (!isAutoLogin) {
+        EMError *error = [[EMClient sharedClient] loginWithUsername:self.phoneNumbertext.text password:self.passWordtext.text];
+    
+        if (!error) {
+            NSLog(@"登陆成功");
+            
+            // 隐藏
+            [MBProgressHUD hideHUD];
+            
+            [self presentViewController:[[RYJTabBarController alloc]init] animated:YES completion:^{
+                
+            }];
+            
+            // 设置为自动登陆
+            [[EMClient sharedClient].options setIsAutoLogin:YES];
+            
+        } else {
+            NSLog(@"登陆失败");
+            // 隐藏
+            [MBProgressHUD hideHUD];
+            [MBProgressHUD showError:@"登陆失败"];
+        }
+    }
     
 }
 

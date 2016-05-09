@@ -8,7 +8,9 @@
 
 #import "RYJCahtViewController.h"
 #import "ChatCell.h"
-@interface RYJCahtViewController () <UITableViewDataSource,UITableViewDelegate,UISearchControllerDelegate>
+#import "EMSDK.h"
+
+@interface RYJCahtViewController () <UITableViewDataSource,UITableViewDelegate,UISearchControllerDelegate,EMClientDelegate>
 @property (nonatomic,strong)UITableView *tableView;
 @property(nonatomic,strong)UISearchController * searchController;
 
@@ -18,11 +20,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    // 添加回调监听代理
+    [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
+    
+    
     self.automaticallyAdjustsScrollViewInsets = NO;
 
     [self createTableView];
 }
 
+- (void)didConnectionStateChanged:(EMConnectionState)aConnectionState {
+    if (aConnectionState == 0) {
+        NSLog(@"连接正常");
+        self.title = @"微信";
+    } else if (aConnectionState == 1) {
+        NSLog(@"连接断开");
+        self.title = @"连接断开";
+    }
+}
 - (void)createTableView
 {
     _tableView = ({

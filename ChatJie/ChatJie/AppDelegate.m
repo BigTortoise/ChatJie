@@ -11,7 +11,7 @@
 #import "PreViewController.h"
 #import "EMSDK.h"
 
-@interface AppDelegate ()
+@interface AppDelegate ()<EMClientDelegate>
 
 @end
 
@@ -25,12 +25,24 @@
     EMOptions *options = [EMOptions optionsWithAppkey:@"10271910#chatjie"];
     [[EMClient sharedClient]initializeSDKWithOptions:options];
     
+    //添加回调监听代理 - 自动登陆
+    [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
+    
     //初始化windows
     [self initWindow];
     
     [self changNav];
     return YES;
 }
+- (void)didAutoLoginWithError:(EMError *)aError {
+    if (!aError) {
+        NSLog(@"自动登录成功");
+    }else{
+        NSLog(@"自动登录失败 %@",aError);
+    }
+
+}
+
 - (void)initWindow{
     self.window = [[UIWindow alloc]initWithFrame:[UIScreen mainScreen].bounds];
     
@@ -40,8 +52,13 @@
     UIStoryboard * storyBoard = [UIStoryboard storyboardWithName:@"Login" bundle:nil];
     PreViewController * preVC = [storyBoard instantiateViewControllerWithIdentifier:@"PreViewController"];
     
-    self.window.rootViewController = preVC;
     
+    
+    if ([EMClient sharedClient].options.isAutoLogin) {
+        self.window.rootViewController = [[RYJTabBarController alloc]init];
+    } else {
+        self.window.rootViewController = preVC;
+    }
     
     [self.window makeKeyAndVisible];
 }
