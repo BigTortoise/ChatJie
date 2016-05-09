@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1940FC8A1CE0B63B0087A204 /* MBProgressHUD+XMG.m in Sources */ = {isa = PBXBuildFile; fileRef = 1940FC861CE0B63B0087A204 /* MBProgressHUD+XMG.m */; };
+		1940FC8B1CE0B63B0087A204 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1940FC871CE0B63B0087A204 /* MBProgressHUD.bundle */; };
+		1940FC8C1CE0B63B0087A204 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1940FC891CE0B63B0087A204 /* MBProgressHUD.m */; };
 		2142867E1CD98FBE00256529 /* RYJFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142867D1CD98FBE00256529 /* RYJFriendModel.m */; };
 		214286821CD9CE6C00256529 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214286801CD9CE6C00256529 /* ChatCell.m */; };
 		214286831CD9CE6C00256529 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 214286811CD9CE6C00256529 /* ChatCell.xib */; };
@@ -58,6 +61,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1940FC851CE0B63B0087A204 /* MBProgressHUD+XMG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MBProgressHUD+XMG.h"; sourceTree = "<group>"; };
+		1940FC861CE0B63B0087A204 /* MBProgressHUD+XMG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MBProgressHUD+XMG.m"; sourceTree = "<group>"; };
+		1940FC871CE0B63B0087A204 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
+		1940FC881CE0B63B0087A204 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		1940FC891CE0B63B0087A204 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		2142867C1CD98FBE00256529 /* RYJFriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJFriendModel.h; sourceTree = "<group>"; };
 		2142867D1CD98FBE00256529 /* RYJFriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJFriendModel.m; sourceTree = "<group>"; };
 		2142867F1CD9CE6C00256529 /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
@@ -149,6 +157,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1940FC831CE0A5A80087A204 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				21DCA0151CD8C307008F16A4 /* Tool */,
+				21DCA0141CD8C2FD008F16A4 /* Main */,
+				214286871CD9DC6A00256529 /* Login */,
+				21DCA0121CD8C2E4008F16A4 /* Chat */,
+				21DCA0131CD8C2EB008F16A4 /* AddressBook */,
+				21DCA0111CD8C2D5008F16A4 /* Found */,
+				21DCA0101CD8C2CE008F16A4 /* Me */,
+				2142868B1CD9DCB800256529 /* Other */,
+			);
+			name = Classes;
+			sourceTree = "<group>";
+		};
+		1940FC841CE0B63B0087A204 /* MBProgressHUDs */ = {
+			isa = PBXGroup;
+			children = (
+				1940FC851CE0B63B0087A204 /* MBProgressHUD+XMG.h */,
+				1940FC861CE0B63B0087A204 /* MBProgressHUD+XMG.m */,
+				1940FC871CE0B63B0087A204 /* MBProgressHUD.bundle */,
+				1940FC881CE0B63B0087A204 /* MBProgressHUD.h */,
+				1940FC891CE0B63B0087A204 /* MBProgressHUD.m */,
+			);
+			path = MBProgressHUDs;
+			sourceTree = "<group>";
+		};
 		214286871CD9DC6A00256529 /* Login */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,14 +258,7 @@
 		21DC9FDC1CD8C1F1008F16A4 /* ChatJie */ = {
 			isa = PBXGroup;
 			children = (
-				21DCA0151CD8C307008F16A4 /* Tool */,
-				21DCA0141CD8C2FD008F16A4 /* Main */,
-				214286871CD9DC6A00256529 /* Login */,
-				21DCA0121CD8C2E4008F16A4 /* Chat */,
-				21DCA0131CD8C2EB008F16A4 /* AddressBook */,
-				21DCA0111CD8C2D5008F16A4 /* Found */,
-				21DCA0101CD8C2CE008F16A4 /* Me */,
-				2142868B1CD9DCB800256529 /* Other */,
+				1940FC831CE0A5A80087A204 /* Classes */,
 				21DC9FDD1CD8C1F1008F16A4 /* Supporting Files */,
 			);
 			path = ChatJie;
@@ -239,6 +267,7 @@
 		21DC9FDD1CD8C1F1008F16A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				1940FC841CE0B63B0087A204 /* MBProgressHUDs */,
 				21DC9FE91CD8C1F1008F16A4 /* Assets.xcassets */,
 				21DC9FEE1CD8C1F1008F16A4 /* Info.plist */,
 				21DC9FDE1CD8C1F1008F16A4 /* main.m */,
@@ -579,6 +608,7 @@
 			files = (
 				214286961CDC302900256529 /* RYJQuanCell.xib in Resources */,
 				21A919D31CDD945F001B7A4B /* Login.storyboard in Resources */,
+				1940FC8B1CE0B63B0087A204 /* MBProgressHUD.bundle in Resources */,
 				214286831CD9CE6C00256529 /* ChatCell.xib in Resources */,
 				21DC9FEA1CD8C1F1008F16A4 /* Assets.xcassets in Resources */,
 			);
@@ -662,6 +692,7 @@
 				21DCA0321CD8C3F8008F16A4 /* RYJFoundViewController.m in Sources */,
 				21A919DC1CDDBB3C001B7A4B /* RegisterViewController.m in Sources */,
 				21DCA0421CD8C770008F16A4 /* RYJMeViewController.m in Sources */,
+				1940FC8C1CE0B63B0087A204 /* MBProgressHUD.m in Sources */,
 				21DCA0381CD8C41F008F16A4 /* RYJAddressBookViewController.m in Sources */,
 				21A919D61CDDBB20001B7A4B /* PreViewController.m in Sources */,
 				2142869F1CDC3DBC00256529 /* RYJSettingViewController.m in Sources */,
@@ -672,6 +703,7 @@
 				21DC9FE21CD8C1F1008F16A4 /* AppDelegate.m in Sources */,
 				214286991CDC3D6E00256529 /* RYJPersonViewController.m in Sources */,
 				21DCA02B1CD8C3E0008F16A4 /* RYJPersonModel.m in Sources */,
+				1940FC8A1CE0B63B0087A204 /* MBProgressHUD+XMG.m in Sources */,
 				21DCA0271CD8C3C1008F16A4 /* NSString+PinYin.m in Sources */,
 				214286911CDC2FF200256529 /* QuanModel.m in Sources */,
 				21DCA0351CD8C416008F16A4 /* RYJCahtViewController.m in Sources */,

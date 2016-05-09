@@ -9,6 +9,8 @@
 #import "RegisterViewController.h"
 #import "LoginViewController.h"
 #import "EMSDK.h"
+#import "RYJTabBarController.h"
+#import "MBProgressHUD+XMG.h"
 @interface RegisterViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumber;
 @property (weak, nonatomic) IBOutlet UIButton *registerBtn;
@@ -20,13 +22,22 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.phoneNumber becomeFirstResponder];
+    
     //监听填入手机号码
     [_phoneNumber addTarget:self action:@selector(textChang) forControlEvents:UIControlEventEditingChanged];
 }
 
+- (void)viewWillDisappear:(BOOL)animated {
+    
+    [self.phoneNumber resignFirstResponder];
+}
 - (void)textChang {
     // 当填入手机号长度 = 11位才可以注册
     if( self.phoneNumber.text.length == 11 ){
+        
+        [self.phoneNumber resignFirstResponder];
+        
         self.registerBtn.enabled = YES;
     }
 }
@@ -39,12 +50,23 @@
 // 注册
 - (IBAction)registerBtn:(id)sender {
     
+    // 提示用户，正在登录ing...
+    [MBProgressHUD showMessage:@"正在注册ing..."];
+    
     EMError *error = [[EMClient sharedClient] registerWithUsername:self.phoneNumber.text password:@"111"];
     if (error == nil) {
         NSLog(@"注册成功");
+        
+        [MBProgressHUD hideHUD];
+        
+        [self presentViewController:[[RYJTabBarController alloc]init] animated:YES completion:^{
+            
+        }];
 
     } else {
         NSLog(@"注册失败");
+        [MBProgressHUD hideHUD];
+        [MBProgressHUD showError:@"注册失败"];
     }
 }
 

@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "RYJTabBarController.h"
 #import "EMSDK.h"
+#import "MBProgressHUD+XMG.h"
 
 @interface LoginViewController ()
 @property (weak, nonatomic) IBOutlet UITextField *phoneNumbertext;
@@ -47,7 +48,8 @@
     if (self.phoneNumbertext.text.length == 11 ) {
         // 当输入的电话号码为11位时退出键盘
         [self.phoneNumbertext resignFirstResponder];
-        
+        // 密码成为第一响应者
+        [self.passWordtext becomeFirstResponder];
         if (self.passWordtext.text.length > 0) {
             
             self.loginBtn.enabled = YES;
@@ -63,13 +65,16 @@
 
 // 登陆
 - (IBAction)loginBtnClick:(id)sender {
-    
-    
 
+    // 提示用户，正在登录ing...
+    [MBProgressHUD showMessage:@"正在登录ing..."];
     
     EMError *error = [[EMClient sharedClient] loginWithUsername:self.phoneNumbertext.text password:self.passWordtext.text];
     if (!error) {
         NSLog(@"登陆成功");
+        
+        // 隐藏
+        [MBProgressHUD hideHUD];
         
         [self presentViewController:[[RYJTabBarController alloc]init] animated:YES completion:^{
             
@@ -78,7 +83,9 @@
         
     } else {
         NSLog(@"登陆失败");
-        
+        // 隐藏
+        [MBProgressHUD hideHUD];
+        [MBProgressHUD showError:@"登陆失败"];
     }
     
     
