@@ -28,7 +28,7 @@
 
     [self createTableView];
 }
-
+// 监听网络状况
 - (void)didConnectionStateChanged:(EMConnectionState)aConnectionState {
     if (aConnectionState == 0) {
         NSLog(@"连接正常");

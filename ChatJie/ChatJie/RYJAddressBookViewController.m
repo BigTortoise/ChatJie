@@ -9,8 +9,9 @@
 #import "RYJAddressBookViewController.h"
 #import "NSString+PinYin.h"
 #import "RYJPersonModel.h"
+#import "EMSDK.h"
 
-@interface RYJAddressBookViewController ()<UITableViewDelegate,UITableViewDataSource>
+@interface RYJAddressBookViewController ()<UITableViewDelegate,UITableViewDataSource,EMClientDelegate>
 @property(nonatomic,strong)NSMutableArray * dataArr;
 
 @property(nonatomic,strong)UITableView * tableView;
@@ -24,22 +25,51 @@
 
 @implementation RYJAddressBookViewController
 
+
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
+    [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
+    
 //    [self addRightBtnWithImgName:@"book_addfriend" andSelector:@selector(rightBtnClick:)];
     //准备数据
     [self preData];
+    
 }
+
+// 从服务器获取所有好友
+- (void)getFriendsFromServer {
+    EMError *error = nil;
+    NSArray *userlist = [[EMClient sharedClient].contactManager getContactsFromServerWithError:&error];
+    if (!error) {
+        NSLog(@"FromServer获取成功 -- %@",userlist);
+    }
+
+}
+// 从数据库获取所有好友
+- (void)getFriendsFromDB {
+    NSArray *userlist = [[EMClient sharedClient].contactManager getContactsFromDB];
+    NSLog(@"FromDB获取成功 -- %@",userlist);
+}
+
+
+
 
 - (void)preData
 {
-    _dataArr = [[NSMutableArray alloc]init];
-    
+    // 判断是否自动登陆
+//    BOOL isAutoLogin = [EMClient sharedClient].options.isAutoLogin;
+//    
+//    if (!isAutoLogin) {
+//        [self getFriendsFromServer];
+//    } else {
+//        [self getFriendsFromDB];
+//    }
     _searchArr = [[NSMutableArray alloc]init];
-    
+
     _sectionArr = @[
                     @{
                         @"name":@"新的朋友",
@@ -58,6 +88,9 @@
                         @"imgName":@"book_gong"
                         }
                     ];
+    
+    _dataArr = [[NSMutableArray alloc]init];
+    
     
     NSArray * nameArr = @[
                           @{
@@ -109,7 +142,7 @@
         }
         
     }
-    NSLog(@"%@",_dataArr);
+//    NSLog(@"%@",_dataArr);
     
     [self createTableView];
 }
