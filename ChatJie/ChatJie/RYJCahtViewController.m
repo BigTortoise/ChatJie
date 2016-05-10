@@ -9,6 +9,7 @@
 #import "RYJCahtViewController.h"
 #import "ChatCell.h"
 #import "EMSDK.h"
+#import "RYJConversationViewController.h"
 
 @interface RYJCahtViewController () <UITableViewDataSource,UITableViewDelegate,UISearchControllerDelegate,EMClientDelegate>
 @property (nonatomic,strong)UITableView *tableView;
@@ -56,7 +57,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 10;
+    return 1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     ChatCell *cell = [tableView dequeueReusableCellWithIdentifier:@"ChatCell"];
@@ -66,8 +67,8 @@
         cell = [[NSBundle mainBundle]loadNibNamed:@"ChatCell" owner:self options:nil][0];
     }
     cell.avaterImgView.image = [UIImage imageNamed:@"me"];
-    cell.nameLabel.text = @"任一杰";
-    cell.messageLabel.text = @"傻逼";
+    cell.nameLabel.text = @"乔布斯";
+    cell.messageLabel.text = @"Stay hungry Stay foolish!";
     cell.timeLabel.text = @"11:11";
     return cell;
 }
@@ -120,4 +121,13 @@
         [self.searchController.searchBar removeFromSuperview];
     }
 }
+
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    RYJConversationViewController *ConversationVC = [[RYJConversationViewController alloc]init];
+    ConversationVC.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:ConversationVC animated:YES];
+}
+
 @end

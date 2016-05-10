@@ -10,6 +10,14 @@
 		1940FC8A1CE0B63B0087A204 /* MBProgressHUD+XMG.m in Sources */ = {isa = PBXBuildFile; fileRef = 1940FC861CE0B63B0087A204 /* MBProgressHUD+XMG.m */; };
 		1940FC8B1CE0B63B0087A204 /* MBProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 1940FC871CE0B63B0087A204 /* MBProgressHUD.bundle */; };
 		1940FC8C1CE0B63B0087A204 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1940FC891CE0B63B0087A204 /* MBProgressHUD.m */; };
+		196EC6AC1CE1F13A0007CCA6 /* RYJConversationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 196EC6AB1CE1F13A0007CCA6 /* RYJConversationViewController.m */; };
+		196EC6B11CE1F8710007CCA6 /* KeyboardView.m in Sources */ = {isa = PBXBuildFile; fileRef = 196EC6B01CE1F8710007CCA6 /* KeyboardView.m */; };
+		196EC6B71CE1FCCF0007CCA6 /* RYJMessageModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 196EC6B61CE1FCCF0007CCA6 /* RYJMessageModel.m */; };
+		196EC6BB1CE202990007CCA6 /* GroupCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 196EC6B91CE202990007CCA6 /* GroupCell.m */; };
+		196EC6BC1CE202990007CCA6 /* GroupCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 196EC6BA1CE202990007CCA6 /* GroupCell.xib */; };
+		196EC6BF1CE202DA0007CCA6 /* PrivateCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 196EC6BE1CE202DA0007CCA6 /* PrivateCell.m */; };
+		196EC6C21CE203F20007CCA6 /* WZXTimeStampToTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 196EC6C11CE203F20007CCA6 /* WZXTimeStampToTimeTool.m */; };
+		196EC6C51CE207540007CCA6 /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 196EC6C41CE207540007CCA6 /* UserInfoManager.m */; };
 		2142867E1CD98FBE00256529 /* RYJFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142867D1CD98FBE00256529 /* RYJFriendModel.m */; };
 		214286821CD9CE6C00256529 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 214286801CD9CE6C00256529 /* ChatCell.m */; };
 		214286831CD9CE6C00256529 /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 214286811CD9CE6C00256529 /* ChatCell.xib */; };
@@ -66,6 +74,21 @@
 		1940FC871CE0B63B0087A204 /* MBProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = MBProgressHUD.bundle; sourceTree = "<group>"; };
 		1940FC881CE0B63B0087A204 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
 		1940FC891CE0B63B0087A204 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		196EC6AA1CE1F13A0007CCA6 /* RYJConversationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJConversationViewController.h; sourceTree = "<group>"; };
+		196EC6AB1CE1F13A0007CCA6 /* RYJConversationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJConversationViewController.m; sourceTree = "<group>"; };
+		196EC6AF1CE1F8710007CCA6 /* KeyboardView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeyboardView.h; sourceTree = "<group>"; };
+		196EC6B01CE1F8710007CCA6 /* KeyboardView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeyboardView.m; sourceTree = "<group>"; };
+		196EC6B51CE1FCCF0007CCA6 /* RYJMessageModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJMessageModel.h; sourceTree = "<group>"; };
+		196EC6B61CE1FCCF0007CCA6 /* RYJMessageModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJMessageModel.m; sourceTree = "<group>"; };
+		196EC6B81CE202990007CCA6 /* GroupCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupCell.h; sourceTree = "<group>"; };
+		196EC6B91CE202990007CCA6 /* GroupCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupCell.m; sourceTree = "<group>"; };
+		196EC6BA1CE202990007CCA6 /* GroupCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupCell.xib; sourceTree = "<group>"; };
+		196EC6BD1CE202DA0007CCA6 /* PrivateCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrivateCell.h; sourceTree = "<group>"; };
+		196EC6BE1CE202DA0007CCA6 /* PrivateCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrivateCell.m; sourceTree = "<group>"; };
+		196EC6C01CE203F20007CCA6 /* WZXTimeStampToTimeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WZXTimeStampToTimeTool.h; sourceTree = "<group>"; };
+		196EC6C11CE203F20007CCA6 /* WZXTimeStampToTimeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WZXTimeStampToTimeTool.m; sourceTree = "<group>"; };
+		196EC6C31CE207540007CCA6 /* UserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
+		196EC6C41CE207540007CCA6 /* UserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
 		2142867C1CD98FBE00256529 /* RYJFriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJFriendModel.h; sourceTree = "<group>"; };
 		2142867D1CD98FBE00256529 /* RYJFriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJFriendModel.m; sourceTree = "<group>"; };
 		2142867F1CD9CE6C00256529 /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
@@ -347,8 +370,12 @@
 		21DCA0151CD8C307008F16A4 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				196EC6C31CE207540007CCA6 /* UserInfoManager.h */,
+				196EC6C41CE207540007CCA6 /* UserInfoManager.m */,
 				21A919CD1CDD8F81001B7A4B /* GlassView.h */,
 				21A919CE1CDD8F81001B7A4B /* GlassView.m */,
+				196EC6C01CE203F20007CCA6 /* WZXTimeStampToTimeTool.h */,
+				196EC6C11CE203F20007CCA6 /* WZXTimeStampToTimeTool.m */,
 				21DCA0281CD8C3C6008F16A4 /* NSString+PinYin */,
 			);
 			name = Tool;
@@ -422,6 +449,8 @@
 			children = (
 				214286841CD9D3A100256529 /* RYJChatModel.h */,
 				214286851CD9D3A100256529 /* RYJChatModel.m */,
+				196EC6B51CE1FCCF0007CCA6 /* RYJMessageModel.h */,
+				196EC6B61CE1FCCF0007CCA6 /* RYJMessageModel.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -429,9 +458,16 @@
 		21DCA01D1CD8C359008F16A4 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				196EC6AF1CE1F8710007CCA6 /* KeyboardView.h */,
+				196EC6B01CE1F8710007CCA6 /* KeyboardView.m */,
 				2142867F1CD9CE6C00256529 /* ChatCell.h */,
 				214286801CD9CE6C00256529 /* ChatCell.m */,
 				214286811CD9CE6C00256529 /* ChatCell.xib */,
+				196EC6B81CE202990007CCA6 /* GroupCell.h */,
+				196EC6B91CE202990007CCA6 /* GroupCell.m */,
+				196EC6BA1CE202990007CCA6 /* GroupCell.xib */,
+				196EC6BD1CE202DA0007CCA6 /* PrivateCell.h */,
+				196EC6BE1CE202DA0007CCA6 /* PrivateCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -441,6 +477,8 @@
 			children = (
 				21DCA0331CD8C40F008F16A4 /* RYJCahtViewController.h */,
 				21DCA0341CD8C416008F16A4 /* RYJCahtViewController.m */,
+				196EC6AA1CE1F13A0007CCA6 /* RYJConversationViewController.h */,
+				196EC6AB1CE1F13A0007CCA6 /* RYJConversationViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -607,6 +645,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				214286961CDC302900256529 /* RYJQuanCell.xib in Resources */,
+				196EC6BC1CE202990007CCA6 /* GroupCell.xib in Resources */,
 				21A919D31CDD945F001B7A4B /* Login.storyboard in Resources */,
 				1940FC8B1CE0B63B0087A204 /* MBProgressHUD.bundle in Resources */,
 				214286831CD9CE6C00256529 /* ChatCell.xib in Resources */,
@@ -683,30 +722,37 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				196EC6C21CE203F20007CCA6 /* WZXTimeStampToTimeTool.m in Sources */,
 				21DCA03E1CD8C42C008F16A4 /* RYJTabBarController.m in Sources */,
 				21A919D91CDDBB2C001B7A4B /* LoginViewController.m in Sources */,
 				214286821CD9CE6C00256529 /* ChatCell.m in Sources */,
 				21A919CF1CDD8F81001B7A4B /* GlassView.m in Sources */,
 				214286951CDC302900256529 /* RYJQuanCell.m in Sources */,
+				196EC6B71CE1FCCF0007CCA6 /* RYJMessageModel.m in Sources */,
 				2142869C1CDC3D9B00256529 /* RYJChangDataViewController.m in Sources */,
 				21DCA0321CD8C3F8008F16A4 /* RYJFoundViewController.m in Sources */,
 				21A919DC1CDDBB3C001B7A4B /* RegisterViewController.m in Sources */,
 				21DCA0421CD8C770008F16A4 /* RYJMeViewController.m in Sources */,
 				1940FC8C1CE0B63B0087A204 /* MBProgressHUD.m in Sources */,
 				21DCA0381CD8C41F008F16A4 /* RYJAddressBookViewController.m in Sources */,
+				196EC6C51CE207540007CCA6 /* UserInfoManager.m in Sources */,
 				21A919D61CDDBB20001B7A4B /* PreViewController.m in Sources */,
 				2142869F1CDC3DBC00256529 /* RYJSettingViewController.m in Sources */,
 				21DCA02E1CD8C3E6008F16A4 /* RYJPersonCell.m in Sources */,
+				196EC6BB1CE202990007CCA6 /* GroupCell.m in Sources */,
 				2142867E1CD98FBE00256529 /* RYJFriendModel.m in Sources */,
+				196EC6BF1CE202DA0007CCA6 /* PrivateCell.m in Sources */,
 				214286861CD9D3A100256529 /* RYJChatModel.m in Sources */,
 				21DCA03D1CD8C42C008F16A4 /* RYJBaseViewController.m in Sources */,
 				21DC9FE21CD8C1F1008F16A4 /* AppDelegate.m in Sources */,
 				214286991CDC3D6E00256529 /* RYJPersonViewController.m in Sources */,
 				21DCA02B1CD8C3E0008F16A4 /* RYJPersonModel.m in Sources */,
 				1940FC8A1CE0B63B0087A204 /* MBProgressHUD+XMG.m in Sources */,
+				196EC6AC1CE1F13A0007CCA6 /* RYJConversationViewController.m in Sources */,
 				21DCA0271CD8C3C1008F16A4 /* NSString+PinYin.m in Sources */,
 				214286911CDC2FF200256529 /* QuanModel.m in Sources */,
 				21DCA0351CD8C416008F16A4 /* RYJCahtViewController.m in Sources */,
+				196EC6B11CE1F8710007CCA6 /* KeyboardView.m in Sources */,
 				21DC9FDF1CD8C1F1008F16A4 /* main.m in Sources */,
 				2142868E1CDC2DD500256529 /* QuanViewController.m in Sources */,
 			);
