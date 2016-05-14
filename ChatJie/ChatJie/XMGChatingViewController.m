@@ -138,6 +138,7 @@
 }
 
 
+
 #pragma mark - UITextView代理
 -(void)textViewDidChange:(UITextView *)textView{
     NSLog(@"%@",textView.text);
