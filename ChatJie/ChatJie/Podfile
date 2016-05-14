@@ -1,0 +1,5 @@
+pod 'HyphenateFullSDK', :git => 'https://github.com/easemob/hyphenate-full-cocoapods.git'
+
+pod 'SDWebImage'
+
+pod 'Masonry'

@@ -9,7 +9,7 @@
 #import "RYJCahtViewController.h"
 #import "ChatCell.h"
 #import "EMSDK.h"
-#import "RYJConversationViewController.h"
+#import "XMGChatingViewController.h"
 
 @interface RYJCahtViewController () <UITableViewDataSource,UITableViewDelegate,UISearchControllerDelegate,EMClientDelegate>
 @property (nonatomic,strong)UITableView *tableView;
@@ -29,7 +29,7 @@
 
     [self createTableView];
 }
-// 监听网络状况
+
 - (void)didConnectionStateChanged:(EMConnectionState)aConnectionState {
     if (aConnectionState == 0) {
         NSLog(@"连接正常");
@@ -67,8 +67,8 @@
         cell = [[NSBundle mainBundle]loadNibNamed:@"ChatCell" owner:self options:nil][0];
     }
     cell.avaterImgView.image = [UIImage imageNamed:@"me"];
-    cell.nameLabel.text = @"乔布斯";
-    cell.messageLabel.text = @"Stay hungry Stay foolish!";
+    cell.nameLabel.text = @"任一杰";
+    cell.messageLabel.text = @"傻逼";
     cell.timeLabel.text = @"11:11";
     return cell;
 }
@@ -122,12 +122,36 @@
     }
 }
 
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    RYJConversationViewController *ConversationVC = [[RYJConversationViewController alloc]init];
-    ConversationVC.hidesBottomBarWhenPushed = YES;
-    [self.navigationController pushViewController:ConversationVC animated:YES];
-}
+    
+    UIStoryboard *mainStoryBoard = [UIStoryboard storyboardWithName:@"Chat" bundle:nil];
+    
+    //将第二个控制器实例化，"SecondViewController"为我们设置的控制器的ID
+    XMGChatingViewController *ChatViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"ChatViewController"];
+    
+    ChatViewController.hidesBottomBarWhenPushed = YES;
+    
+    //跳转事件
+    [self.navigationController pushViewController:ChatViewController animated:YES];
+    
+    
 
+}
 @end
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
