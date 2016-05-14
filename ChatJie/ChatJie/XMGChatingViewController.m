@@ -7,54 +7,61 @@
 //
 
 #import "XMGChatingViewController.h"
-#import "XMGMessage.h"
-#import "XMGMessageCell.h"
-//#import "XMGMeCell.h"
-//#import "XMGOtherCell.h"
+#import "EMSDK.h"
+#import "XMGChatCell.h"
 
-@interface XMGChatingViewController () <UITableViewDataSource, UITableViewDelegate>
-@property (nonatomic, strong) NSArray *messages;
-@property (weak, nonatomic) IBOutlet UITextField *messageField;
+
+@interface XMGChatingViewController () <UITableViewDataSource, UITableViewDelegate,EMClientDelegate,UITextViewDelegate>
+
+@property (nonatomic, strong) NSMutableArray *messages;
+@property (strong, nonatomic) IBOutlet UITextView *textView;
+
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
+
+/** 计算高度的cell工具对象 */
+@property (nonatomic, strong) XMGChatCell *chatCellTool;
+
 @end
+
 
 @implementation XMGChatingViewController
 
-- (NSArray *)messages
-{
-    if (_messages == nil) {
-        // 加载plist中的字典数组
-        NSString *path = [[NSBundle mainBundle] pathForResource:@"messages.plist" ofType:nil];
-        NSArray *dictArray = [NSArray arrayWithContentsOfFile:path];
-        
-        // 字典数组 -> 模型数组
-        NSMutableArray *messageArray = [NSMutableArray array];
-        // 用来记录上一条消息模型
-        XMGMessage *lastMessage = nil;
-        for (NSDictionary *dict in dictArray) {
-            XMGMessage *message = [XMGMessage messageWithDict:dict];
-            message.hideTime = [message.time isEqualToString:lastMessage.time];
-            [messageArray addObject:message];
-            
-            lastMessage = message;
-        }
-        
-        _messages = messageArray;
-    }
-    return _messages;
-}
-
 - (void)viewDidLoad {
+    
     [super viewDidLoad];
+    
+    // 设置代理
+    [[EMClient sharedClient] addDelegate:self delegateQueue:nil];
+    
+    // 加载本地数据库聊天记录（MessageV1）
+    [self loadLocalChatRecords];
     
     // 设置文本框左边的内容
     UIView *leftView = [[UIView alloc] init];
     leftView.frame = CGRectMake(0, 0, 10, 0);
-    self.messageField.leftView = leftView;
-    self.messageField.leftViewMode = UITextFieldViewModeAlways;
+//    self.messageField.leftView = leftView;
+//    self.messageField.leftViewMode = UITextFieldViewModeAlways;
     
     // 监听键盘通知
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChangeFrame:) name:UIKeyboardWillChangeFrameNotification object:nil];
+
 }
+
+- (void)loadLocalChatRecords {
+    // 获取会话列表
+    EMConversation *conversation = [[EMClient sharedClient].chatManager getConversation:@"22222222222" type:EMConversationTypeChat createIfNotExist:YES];
+    // 获取会话中的全部聊天记录
+//    EMMessage *msg = [conversation loadMessageWithId:@"22222222222"];
+    long longFrom = 0;
+    long longTo = 10;
+    // 加载与当前聊天用户所有聊天记录
+    NSArray *messages = [conversation loadMoreMessagesFrom:longFrom to:longTo maxCount:10];
+
+    
+    // 添加到数据源
+    [self.messages addObjectsFromArray:messages];
+}
+
 
 - (void)dealloc
 {
@@ -77,42 +84,42 @@
 #pragma mark - <UITableViewDataSource>
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
+
     return self.messages.count;
+//    return 10;
 }
 
+-(CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
+    // 设置label的数据
+    // 1.获取消息模型
+    EMMessage *msg = self.messages[indexPath.row];
+    
+    self.chatCellTool.messages = msg;
+    
+    return [self.chatCellTool cellHeghit];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    // 取出模型
-    XMGMessage *msg = self.messages[indexPath.row];
+    //1.先获取消息模型
+    EMMessage *message = self.messages[indexPath.row];
+    //    EMMessage
+    /* from:xmgtest1 to:xmgtest7 发送方（自己）
+     * from:xmgtest7 to:xmgtest1 接收方 （好友）
+     */
     
-    // 重用标识（决定了cell的类型）
-    NSString *ID = (msg.type == XMGMessageTypeMe) ? @"me" : @"other";
-    
-    // 加载cell
-    XMGMessageCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
-    cell.message = msg;
+    XMGChatCell *cell = nil;
+    if ([message.from isEqualToString:@"22222222222"]) {//接收方
+        cell = [tableView dequeueReusableCellWithIdentifier:ReceiverCell];
+    }else{//发送方
+        cell = [tableView dequeueReusableCellWithIdentifier:SenderCell];
+    }
+    //显示内容
+    cell.messages = message;
+    NSLog(@"%@",message);
     
     return cell;
-   
-//    if (msg.type == XMGMessageTypeMe) {
-//        static NSString *ID = @"me";
-//        // 加载cell
-//        XMGMeCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-//        
-//        cell.message = msg;
-//        
-//        return cell;
-//    } else {
-//        static NSString *ID = @"other";
-//        // 加载cell
-//        XMGOtherCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-//        
-//        cell.message = msg;
-//        
-//        return cell;
-//    }
+
 }
 
 #pragma mark - <UITableViewDelegate>
@@ -121,11 +128,6 @@
     return 200;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    XMGMessage *message = self.messages[indexPath.row];
-    return message.cellHeight;
-}
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
@@ -134,4 +136,82 @@
 //    [self.messageField endEditing:YES];
     [self.view endEditing:YES];
 }
+
+
+#pragma mark - UITextView代理
+-(void)textViewDidChange:(UITextView *)textView{
+    NSLog(@"%@",textView.text);
+    
+    // 监听Send事件--判断最后的一个字符是不是换行字符
+    if ([textView.text hasSuffix:@"\n"]) {
+        NSLog(@"发送操作");
+        [self sendMessage:textView.text];
+        
+        // 清空textView的文字
+        textView.text = nil;
+    }
+   
+}
+#pragma mark - 发送消息
+- (void)sendMessage:(NSString *)text {
+    // 把最后一个换行字符去除
+#warning 换行字符 只占用一个长度
+    text = [text substringToIndex:text.length - 1];
+    
+    
+    EMTextMessageBody *body = [[EMTextMessageBody alloc] initWithText:text];
+    NSString *from = [[EMClient sharedClient] currentUsername];
+    
+    EMMessage *message = [[EMMessage alloc]initWithConversationID:@"22222222222" from:from to:@"22222222222" body:body ext:nil];
+    
+    [[EMClient sharedClient].chatManager asyncSendMessage:message progress:^(int progress) {
+        NSLog(@"%i",progress);
+    } completion:^(EMMessage *message, EMError *error) {
+        NSLog(@"%@ - %@",message,error);
+    }];
+    
+    // 3.把消息添加到数据源，然后再刷新表格
+    [self.messages addObject:message];
+    [self.tableView reloadData];
+    // 4.把消息显示在顶部
+    [self scrollToBottom];
+}
+//把消息显示在顶部的方法
+- (void)scrollToBottom{
+    //获取最后一行
+    if (self.messages.count == 0) {
+        return;
+    }
+    
+    NSIndexPath *lastIndex = [NSIndexPath indexPathForRow:self.messages.count - 1 inSection:0];
+    
+    [self.tableView scrollToRowAtIndexPath:lastIndex atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    
+    
+}
+
+- (void)didReceiveMessages:(NSArray *)aMessages
+{
+    //1.把接收的消息添加到数据源
+    [self.messages addObject:aMessages];
+    
+    //2.刷新表格
+    [self.tableView reloadData];
+    
+    //3.显示数据到底部
+    [self scrollToBottom];
+
+}
+
 @end
+
+
+
+
+
+
+
+
+
+
+

@@ -55,39 +55,43 @@
                                         </state>
                                         <state key="highlighted" backgroundImage="chat_bottom_smile_press"/>
                                     </button>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" background="chat_bottom_textfield" translatesAutoresizingMaskIntoConstraints="NO" id="NIc-c4-BqK">
-                                        <rect key="frame" x="44" y="5" width="468" height="34"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="DE8-UI-pUP">
+                                        <rect key="frame" x="46" y="5" width="458" height="34"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences" returnKeyType="send"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="ew6-MA-cw6" id="JfS-gG-E9D"/>
+                                        </connections>
+                                    </textView>
                                 </subviews>
                                 <color key="backgroundColor" red="1" green="0.59362031869999998" blue="0.74681548269999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstItem="m9o-45-i6Q" firstAttribute="top" secondItem="aL6-a4-zxu" secondAttribute="top" id="2OL-wR-6Hl"/>
                                     <constraint firstAttribute="bottom" secondItem="3Yn-qr-gR4" secondAttribute="bottom" id="2fg-fC-2Sg"/>
-                                    <constraint firstItem="NIc-c4-BqK" firstAttribute="top" secondItem="aL6-a4-zxu" secondAttribute="top" constant="5" id="Aob-P3-FQa"/>
                                     <constraint firstItem="3Yn-qr-gR4" firstAttribute="leading" secondItem="aL6-a4-zxu" secondAttribute="leading" id="BQm-0y-J0i"/>
                                     <constraint firstAttribute="bottom" secondItem="E0L-4L-asY" secondAttribute="bottom" id="IeL-Oj-EPR"/>
                                     <constraint firstAttribute="trailing" secondItem="oav-uX-Uq9" secondAttribute="trailing" id="LiV-4r-4At"/>
                                     <constraint firstItem="m9o-45-i6Q" firstAttribute="leading" secondItem="aL6-a4-zxu" secondAttribute="leading" id="M20-Nh-6FR"/>
                                     <constraint firstAttribute="height" constant="44" id="Set-Ci-4xB"/>
+                                    <constraint firstItem="E0L-4L-asY" firstAttribute="leading" secondItem="DE8-UI-pUP" secondAttribute="trailing" constant="5" id="UZw-UH-smo"/>
+                                    <constraint firstItem="DE8-UI-pUP" firstAttribute="leading" secondItem="3Yn-qr-gR4" secondAttribute="trailing" constant="5" id="UdQ-fv-Ppv"/>
+                                    <constraint firstAttribute="bottom" secondItem="DE8-UI-pUP" secondAttribute="bottom" constant="5" id="ck8-Wh-Dz2"/>
                                     <constraint firstItem="oav-uX-Uq9" firstAttribute="top" secondItem="aL6-a4-zxu" secondAttribute="top" id="dMv-fB-tic"/>
                                     <constraint firstItem="oav-uX-Uq9" firstAttribute="leading" secondItem="E0L-4L-asY" secondAttribute="trailing" id="dn9-2a-tBJ"/>
                                     <constraint firstItem="E0L-4L-asY" firstAttribute="top" secondItem="aL6-a4-zxu" secondAttribute="top" id="eCj-Z1-YNk"/>
                                     <constraint firstItem="3Yn-qr-gR4" firstAttribute="top" secondItem="aL6-a4-zxu" secondAttribute="top" id="mjA-59-Akn"/>
                                     <constraint firstAttribute="trailing" secondItem="m9o-45-i6Q" secondAttribute="trailing" id="omV-5m-qoP"/>
-                                    <constraint firstItem="NIc-c4-BqK" firstAttribute="leading" secondItem="3Yn-qr-gR4" secondAttribute="trailing" id="or9-9f-5R7"/>
-                                    <constraint firstAttribute="bottom" secondItem="NIc-c4-BqK" secondAttribute="bottom" constant="5" id="qt5-zz-bzW"/>
                                     <constraint firstAttribute="bottom" secondItem="m9o-45-i6Q" secondAttribute="bottom" id="tZg-rl-crn"/>
                                     <constraint firstAttribute="bottom" secondItem="oav-uX-Uq9" secondAttribute="bottom" id="x77-Te-scE"/>
-                                    <constraint firstItem="E0L-4L-asY" firstAttribute="leading" secondItem="NIc-c4-BqK" secondAttribute="trailing" id="yu7-ej-3RU"/>
+                                    <constraint firstItem="DE8-UI-pUP" firstAttribute="top" secondItem="aL6-a4-zxu" secondAttribute="top" constant="5" id="xVl-0e-Hfz"/>
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="158" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="B3G-pb-KS0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="556"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="me" rowHeight="158" id="koO-kj-i8z" customClass="XMGMessageCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="me" rowHeight="158" id="koO-kj-i8z" customClass="XMGChatCell">
                                         <rect key="frame" x="0.0" y="22" width="600" height="158"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="koO-kj-i8z" id="WVO-cd-d4T">
@@ -149,11 +153,11 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="iconView" destination="8bI-fE-OQC" id="Wf6-av-2RH"/>
-                                            <outlet property="textButton" destination="PMG-mb-P1t" id="DBN-n8-fWH"/>
+                                            <outlet property="messageBtn" destination="PMG-mb-P1t" id="PDz-B5-2nF"/>
                                             <outlet property="timeLabel" destination="tqv-uf-G3J" id="MWB-O0-Y6p"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="other" rowHeight="158" id="5h5-ET-OEa" customClass="XMGMessageCell">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="other" rowHeight="158" id="5h5-ET-OEa" customClass="XMGChatCell">
                                         <rect key="frame" x="0.0" y="180" width="600" height="158"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5h5-ET-OEa" id="tCs-bL-fYB">
@@ -217,6 +221,7 @@
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="iconView" destination="CQT-dw-onm" id="1GT-vz-A4r"/>
+                                            <outlet property="messageBtn" destination="B2o-En-fkS" id="NTj-io-05a"/>
                                             <outlet property="textButton" destination="B2o-En-fkS" id="gyI-CB-DfE"/>
                                             <outlet property="timeLabel" destination="MKj-Sa-4Yh" id="Pc0-jU-AbL"/>
                                         </connections>
@@ -234,6 +239,7 @@
                             <constraint firstItem="B3G-pb-KS0" firstAttribute="top" secondItem="PNs-Pk-u5s" secondAttribute="top" id="Oxr-xa-pgb"/>
                             <constraint firstItem="B3G-pb-KS0" firstAttribute="leading" secondItem="PNs-Pk-u5s" secondAttribute="leading" id="ULq-b1-x47"/>
                             <constraint firstItem="aL6-a4-zxu" firstAttribute="leading" secondItem="PNs-Pk-u5s" secondAttribute="leading" id="V6D-fj-f0n"/>
+                            <constraint firstItem="B3G-pb-KS0" firstAttribute="bottom" secondItem="aL6-a4-zxu" secondAttribute="bottom" id="bwL-57-AtB"/>
                             <constraint firstItem="B3G-pb-KS0" firstAttribute="top" secondItem="GM8-VP-K1b" secondAttribute="bottom" id="h0g-sA-I5k"/>
                             <constraint firstAttribute="bottom" secondItem="aL6-a4-zxu" secondAttribute="bottom" id="lN2-5d-wTQ"/>
                             <constraint firstItem="B3G-pb-KS0" firstAttribute="height" secondItem="PNs-Pk-u5s" secondAttribute="height" constant="-44" id="ljQ-az-RcQ"/>
@@ -243,12 +249,14 @@
                         <variation key="default">
                             <mask key="constraints">
                                 <exclude reference="Oxr-xa-pgb"/>
+                                <exclude reference="bwL-57-AtB"/>
                                 <exclude reference="h0g-sA-I5k"/>
                             </mask>
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="messageField" destination="NIc-c4-BqK" id="Hae-NP-JVC"/>
+                        <outlet property="tableView" destination="B3G-pb-KS0" id="Eqi-YE-G5z"/>
+                        <outlet property="textView" destination="DE8-UI-pUP" id="YEG-cM-bnq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7NG-Ax-RGz" sceneMemberID="firstResponder"/>
@@ -258,11 +266,10 @@
     </scenes>
     <resources>
         <image name="Album_ToolViewEmotion" width="30" height="30"/>
-        <image name="ReceiverTextNodeBkgHL" width="65" height="54"/>
-        <image name="SenderTextNodeBkg" width="65" height="54"/>
+        <image name="ReceiverTextNodeBkgHL" width="24" height="54"/>
+        <image name="SenderTextNodeBkg" width="24" height="54"/>
         <image name="chat_bottom_bg" width="10" height="42"/>
         <image name="chat_bottom_smile_press" width="10" height="42"/>
-        <image name="chat_bottom_textfield" width="166" height="31"/>
         <image name="chat_bottom_up_press" width="10" height="42"/>
         <image name="chat_bottom_voice_press" width="10" height="42"/>
         <image name="chat_setmode_add_btn_normal" width="28" height="28"/>

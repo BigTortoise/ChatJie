@@ -13,16 +13,12 @@
 		196EC6C21CE203F20007CCA6 /* WZXTimeStampToTimeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 196EC6C11CE203F20007CCA6 /* WZXTimeStampToTimeTool.m */; };
 		196EC6C51CE207540007CCA6 /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 196EC6C41CE207540007CCA6 /* UserInfoManager.m */; };
 		2133F9F51CE6A885002F0BEE /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 2133F9F41CE6A885002F0BEE /* Podfile */; };
-		2133FA031CE6A963002F0BEE /* messages.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2133F9F71CE6A963002F0BEE /* messages.plist */; };
 		2133FA041CE6A963002F0BEE /* XMGChatingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2133F9F91CE6A963002F0BEE /* XMGChatingViewController.m */; };
-		2133FA051CE6A963002F0BEE /* XMGMeCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2133F9FB1CE6A963002F0BEE /* XMGMeCell.m */; };
-		2133FA061CE6A963002F0BEE /* XMGMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 2133F9FD1CE6A963002F0BEE /* XMGMessage.m */; };
-		2133FA071CE6A963002F0BEE /* XMGMessageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2133F9FF1CE6A963002F0BEE /* XMGMessageCell.m */; };
-		2133FA081CE6A963002F0BEE /* XMGOtherCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2133FA011CE6A963002F0BEE /* XMGOtherCell.m */; };
 		2133FA091CE6A963002F0BEE /* Chat.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2133FA021CE6A963002F0BEE /* Chat.storyboard */; };
 		2133FA0D1CE6A9D6002F0BEE /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2133FA0B1CE6A9D6002F0BEE /* ChatCell.m */; };
 		2133FA0E1CE6A9D6002F0BEE /* ChatCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2133FA0C1CE6A9D6002F0BEE /* ChatCell.xib */; };
 		2133FA111CE6AA5A002F0BEE /* RYJCahtViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2133FA101CE6AA5A002F0BEE /* RYJCahtViewController.m */; };
+		2133FA171CE6EA6D002F0BEE /* XMGChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2133FA161CE6EA6D002F0BEE /* XMGChatCell.m */; };
 		2142867E1CD98FBE00256529 /* RYJFriendModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142867D1CD98FBE00256529 /* RYJFriendModel.m */; };
 		2142868E1CDC2DD500256529 /* QuanViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2142868D1CDC2DD500256529 /* QuanViewController.m */; };
 		214286911CDC2FF200256529 /* QuanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 214286901CDC2FF200256529 /* QuanModel.m */; };
@@ -80,23 +76,16 @@
 		196EC6C31CE207540007CCA6 /* UserInfoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserInfoManager.h; sourceTree = "<group>"; };
 		196EC6C41CE207540007CCA6 /* UserInfoManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserInfoManager.m; sourceTree = "<group>"; };
 		2133F9F41CE6A885002F0BEE /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
-		2133F9F71CE6A963002F0BEE /* messages.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = messages.plist; sourceTree = "<group>"; };
 		2133F9F81CE6A963002F0BEE /* XMGChatingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGChatingViewController.h; sourceTree = "<group>"; };
 		2133F9F91CE6A963002F0BEE /* XMGChatingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGChatingViewController.m; sourceTree = "<group>"; };
-		2133F9FA1CE6A963002F0BEE /* XMGMeCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeCell.h; sourceTree = "<group>"; };
-		2133F9FB1CE6A963002F0BEE /* XMGMeCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeCell.m; sourceTree = "<group>"; };
-		2133F9FC1CE6A963002F0BEE /* XMGMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMessage.h; sourceTree = "<group>"; };
-		2133F9FD1CE6A963002F0BEE /* XMGMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMessage.m; sourceTree = "<group>"; };
-		2133F9FE1CE6A963002F0BEE /* XMGMessageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMessageCell.h; sourceTree = "<group>"; };
-		2133F9FF1CE6A963002F0BEE /* XMGMessageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMessageCell.m; sourceTree = "<group>"; };
-		2133FA001CE6A963002F0BEE /* XMGOtherCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGOtherCell.h; sourceTree = "<group>"; };
-		2133FA011CE6A963002F0BEE /* XMGOtherCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGOtherCell.m; sourceTree = "<group>"; };
 		2133FA021CE6A963002F0BEE /* Chat.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Chat.storyboard; sourceTree = "<group>"; };
 		2133FA0A1CE6A9D6002F0BEE /* ChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
 		2133FA0B1CE6A9D6002F0BEE /* ChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
 		2133FA0C1CE6A9D6002F0BEE /* ChatCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChatCell.xib; sourceTree = "<group>"; };
 		2133FA0F1CE6AA5A002F0BEE /* RYJCahtViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJCahtViewController.h; sourceTree = "<group>"; };
 		2133FA101CE6AA5A002F0BEE /* RYJCahtViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJCahtViewController.m; sourceTree = "<group>"; };
+		2133FA151CE6EA6D002F0BEE /* XMGChatCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGChatCell.h; sourceTree = "<group>"; };
+		2133FA161CE6EA6D002F0BEE /* XMGChatCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGChatCell.m; sourceTree = "<group>"; };
 		2142867C1CD98FBE00256529 /* RYJFriendModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RYJFriendModel.h; sourceTree = "<group>"; };
 		2142867D1CD98FBE00256529 /* RYJFriendModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RYJFriendModel.m; sourceTree = "<group>"; };
 		2142868C1CDC2DD500256529 /* QuanViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuanViewController.h; sourceTree = "<group>"; };
@@ -212,20 +201,37 @@
 		2133F9F61CE6A952002F0BEE /* Chat */ = {
 			isa = PBXGroup;
 			children = (
-				2133F9F71CE6A963002F0BEE /* messages.plist */,
-				2133F9F81CE6A963002F0BEE /* XMGChatingViewController.h */,
-				2133F9F91CE6A963002F0BEE /* XMGChatingViewController.m */,
-				2133F9FA1CE6A963002F0BEE /* XMGMeCell.h */,
-				2133F9FB1CE6A963002F0BEE /* XMGMeCell.m */,
-				2133F9FC1CE6A963002F0BEE /* XMGMessage.h */,
-				2133F9FD1CE6A963002F0BEE /* XMGMessage.m */,
-				2133F9FE1CE6A963002F0BEE /* XMGMessageCell.h */,
-				2133F9FF1CE6A963002F0BEE /* XMGMessageCell.m */,
-				2133FA001CE6A963002F0BEE /* XMGOtherCell.h */,
-				2133FA011CE6A963002F0BEE /* XMGOtherCell.m */,
-				2133FA021CE6A963002F0BEE /* Chat.storyboard */,
+				2133FA141CE6ADC0002F0BEE /* Controller */,
+				2133FA131CE6ADBA002F0BEE /* View */,
+				2133FA121CE6AD9D002F0BEE /* Model */,
 			);
 			name = Chat;
+			sourceTree = "<group>";
+		};
+		2133FA121CE6AD9D002F0BEE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		2133FA131CE6ADBA002F0BEE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2133FA151CE6EA6D002F0BEE /* XMGChatCell.h */,
+				2133FA161CE6EA6D002F0BEE /* XMGChatCell.m */,
+				2133FA021CE6A963002F0BEE /* Chat.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		2133FA141CE6ADC0002F0BEE /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				2133F9F81CE6A963002F0BEE /* XMGChatingViewController.h */,
+				2133F9F91CE6A963002F0BEE /* XMGChatingViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		214286871CD9DC6A00256529 /* Login */ = {
@@ -312,7 +318,6 @@
 		21DC9FDD1CD8C1F1008F16A4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				1940FC841CE0B63B0087A204 /* MBProgressHUDs */,
 				21DC9FE91CD8C1F1008F16A4 /* Assets.xcassets */,
 				21DC9FEE1CD8C1F1008F16A4 /* Info.plist */,
 				21DC9FDE1CD8C1F1008F16A4 /* main.m */,
@@ -398,6 +403,7 @@
 				21A919CE1CDD8F81001B7A4B /* GlassView.m */,
 				196EC6C01CE203F20007CCA6 /* WZXTimeStampToTimeTool.h */,
 				196EC6C11CE203F20007CCA6 /* WZXTimeStampToTimeTool.m */,
+				1940FC841CE0B63B0087A204 /* MBProgressHUDs */,
 				21DCA0281CD8C3C6008F16A4 /* NSString+PinYin */,
 			);
 			name = Tool;
@@ -657,7 +663,6 @@
 				214286961CDC302900256529 /* RYJQuanCell.xib in Resources */,
 				21A919D31CDD945F001B7A4B /* Login.storyboard in Resources */,
 				1940FC8B1CE0B63B0087A204 /* MBProgressHUD.bundle in Resources */,
-				2133FA031CE6A963002F0BEE /* messages.plist in Resources */,
 				2133FA0E1CE6A9D6002F0BEE /* ChatCell.xib in Resources */,
 				2133FA091CE6A963002F0BEE /* Chat.storyboard in Resources */,
 				21DC9FEA1CD8C1F1008F16A4 /* Assets.xcassets in Resources */,
@@ -733,7 +738,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2133FA081CE6A963002F0BEE /* XMGOtherCell.m in Sources */,
 				196EC6C21CE203F20007CCA6 /* WZXTimeStampToTimeTool.m in Sources */,
 				21DCA03E1CD8C42C008F16A4 /* RYJTabBarController.m in Sources */,
 				21A919D91CDDBB2C001B7A4B /* LoginViewController.m in Sources */,
@@ -751,18 +755,16 @@
 				196EC6C51CE207540007CCA6 /* UserInfoManager.m in Sources */,
 				21A919D61CDDBB20001B7A4B /* PreViewController.m in Sources */,
 				2142869F1CDC3DBC00256529 /* RYJSettingViewController.m in Sources */,
+				2133FA171CE6EA6D002F0BEE /* XMGChatCell.m in Sources */,
 				21DCA02E1CD8C3E6008F16A4 /* RYJPersonCell.m in Sources */,
 				2142867E1CD98FBE00256529 /* RYJFriendModel.m in Sources */,
-				2133FA051CE6A963002F0BEE /* XMGMeCell.m in Sources */,
 				21DCA03D1CD8C42C008F16A4 /* RYJBaseViewController.m in Sources */,
 				21DC9FE21CD8C1F1008F16A4 /* AppDelegate.m in Sources */,
 				214286991CDC3D6E00256529 /* RYJPersonViewController.m in Sources */,
 				21DCA02B1CD8C3E0008F16A4 /* RYJPersonModel.m in Sources */,
 				1940FC8A1CE0B63B0087A204 /* MBProgressHUD+XMG.m in Sources */,
 				21DCA0271CD8C3C1008F16A4 /* NSString+PinYin.m in Sources */,
-				2133FA061CE6A963002F0BEE /* XMGMessage.m in Sources */,
 				214286911CDC2FF200256529 /* QuanModel.m in Sources */,
-				2133FA071CE6A963002F0BEE /* XMGMessageCell.m in Sources */,
 				21DC9FDF1CD8C1F1008F16A4 /* main.m in Sources */,
 				2142868E1CDC2DD500256529 /* QuanViewController.m in Sources */,
 			);

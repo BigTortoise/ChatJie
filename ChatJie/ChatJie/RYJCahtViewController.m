@@ -67,8 +67,8 @@
         cell = [[NSBundle mainBundle]loadNibNamed:@"ChatCell" owner:self options:nil][0];
     }
     cell.avaterImgView.image = [UIImage imageNamed:@"me"];
-    cell.nameLabel.text = @"任一杰";
-    cell.messageLabel.text = @"傻逼";
+    cell.nameLabel.text = @"乔布斯";
+    cell.messageLabel.text = @"stay hunger stay foolish";
     cell.timeLabel.text = @"11:11";
     return cell;
 }
@@ -131,6 +131,8 @@
     XMGChatingViewController *ChatViewController = [mainStoryBoard instantiateViewControllerWithIdentifier:@"ChatViewController"];
     
     ChatViewController.hidesBottomBarWhenPushed = YES;
+    
+    ChatViewController.title = @"乔布斯";
     
     //跳转事件
     [self.navigationController pushViewController:ChatViewController animated:YES];
